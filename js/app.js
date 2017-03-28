@@ -54,7 +54,7 @@ angular.module('smoothflowwebsite', [
             debugger;
             $http({
                 method: 'GET',
-                url: 'http://dev.smoothflow.io/apis/plan/priceplan.json',
+                url: 'http://smoothflow.io/apis/plan/priceplan.json',
                 dataType: "json",
                 headers: {
                     "Access-Control-Allow-Origin": "*",
