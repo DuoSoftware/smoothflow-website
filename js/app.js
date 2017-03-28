@@ -74,7 +74,7 @@ angular.module('smoothflowwebsite', [
             //         console.log("Error : " + data);
             //     });
 
-            var url = "http://dev.smoothflow.io/apis/plan/priceplan.json"
+            var url = "http://smoothflow.io/apis/plan/priceplan.json"
             // $sce.trustAsResourceUrl(url);
 
             $http.jsonp(url)
