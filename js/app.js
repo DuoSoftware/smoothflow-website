@@ -84,7 +84,7 @@ angular.module('smoothflowwebsite', [
             //         console.log("Error : "+data);
             //     });
 
-            $http.get("http://smoothflow.io/apis/plan/priceplan.json")
+            $http.jsonp("http://smoothflow.io/apis/plan/priceplan.json")
                 .then(function (response) {
                     console.log("Ok : " + data);
                     $scope.palndetails=response.data;
