@@ -52,37 +52,37 @@ angular.module('smoothflowwebsite', [
 
         $scope.getplan = function () {
             debugger;
-            $http({
-                method: 'GET',
-                url: 'http://smoothflow.io/apis/plan/priceplan.json',
-                dataType: "json",
-                headers: {
-                    "Access-Control-Allow-Origin": "*",
-                    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-                    "Access-Control-Allow-Headers": "Content-Type, X-Requested-With",
-                    "Content-Type": "text/json"
-                },
+            // $http({
+            //     method: 'GET',
+            //     url: 'http://smoothflow.io/apis/plan/priceplan.json',
+            //     dataType: "json",
+            //     headers: {
+            //         "Access-Control-Allow-Origin": "*",
+            //         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+            //         "Access-Control-Allow-Headers": "Content-Type, X-Requested-With",
+            //         "Content-Type": "text/json"
+            //     },
 
-            })
-                .success(function (data) {
-                    console.log("Ok : " + data);
-                    $scope.palndetails=data;
+            // })
+            //     .success(function (data) {
+            //         console.log("Ok : " + data);
+            //         $scope.palndetails=data;
 
-                })
-                .error(function (data) {
+            //     })
+            //     .error(function (data) {
 
-                    console.log("Error : " + data);
-                });
-
-            // var url = "http://dev.smoothflow.io/apis/plan/priceplan.json"
-            // // $sce.trustAsResourceUrl(url);
-
-            // $http.jsonp(url)
-            //     .success(function (data, status, headers, config) {
-            //         console.log("Ok : "+data);
-            //     }).error(function (data, status, headers, config) {
-            //         console.log("Error : "+data);
+            //         console.log("Error : " + data);
             //     });
+
+            var url = "http://dev.smoothflow.io/apis/plan/priceplan.json?callback=JSON_CALLBACK"
+            // $sce.trustAsResourceUrl(url);
+
+            $http.jsonp(url)
+                .success(function (data, status, headers, config) {
+                    console.log("Ok : "+data);
+                }).error(function (data, status, headers, config) {
+                    console.log("Error : "+data);
+                });
         };
 
         $scope.getplan();
