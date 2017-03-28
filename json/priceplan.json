@@ -1,0 +1,92 @@
+[{
+ "code": "Free",
+ "type": "base",
+ "name": "PERSONAL",
+ "price": 0.00,
+ "subscriptionunit": "month",
+ "subscriptionqty": 1,
+ "customizable": false,
+ "rules": [{
+  "tag": "user",
+  "sign": "<=",
+  "amount": "1",
+  "expiry": null
+}, {
+  "tag": "workflow",
+  "sign": "<=",
+  "amount": "10",
+  "expiry": {
+   "uom": "year",
+   "value": "1"
+ }
+}, {
+  "tag": "request",
+  "sign": "<=",
+  "amount": "1000",
+  "expiry": {
+   "uom": "year",
+   "value": "1"
+ }
+}]
+}, {
+ "code": "imbig",
+ "type": "base",
+ "name": "Just Try",
+ "price": 10.00,
+ "subscriptionunit": "year",
+ "subscriptionqty": 1,
+ "customizable": false,
+ "rules": [{
+  "tag": "user",
+  "sign": "<=",
+  "amount": "5",
+  "expiry": null
+}, {
+  "tag": "workflow",
+  "sign": "<=",
+  "amount": "25",
+  "expiry": {
+   "uom": "year",
+   "value": "1"
+ }
+}, {
+  "tag": "request",
+  "sign": "<=",
+  "amount": "0",
+  "expiry": {
+   "uom": "year",
+   "value": "1"
+ }
+}]
+}, {
+ "code": "justgrowing",
+ "type": "base",
+ "name": "We Are A Mini Team",
+ "price": 25.00,
+ "subscriptionunit": "month",
+ "subscriptionqty": 1,
+ "customizable": false,
+ "rules": [{
+  "tag": "user",
+  "sign": "<=",
+  "amount": "10",
+  "expiry": null
+}, {
+  "tag": "workflow",
+  "sign": "<=",
+  "amount": "10",
+  "expiry": {
+   "uom": "month",
+   "value": "1"
+ }
+}, {
+  "tag": "request",
+  "sign": "<=",
+  "amount": "0",
+  "expiry": {
+   "uom": "year",
+   "value": "1"
+ }
+}]
+
+}]
