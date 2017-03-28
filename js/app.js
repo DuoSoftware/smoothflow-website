@@ -74,14 +74,20 @@ angular.module('smoothflowwebsite', [
             //         console.log("Error : " + data);
             //     });
 
-            var url = "http://smoothflow.io/apis/plan/priceplan.json"
-            // $sce.trustAsResourceUrl(url);
+            // var url = "http://smoothflow.io/apis/plan/priceplan.json"
+            // // $sce.trustAsResourceUrl(url);
 
-            $http.jsonp(url)
-                .success(function (data, status, headers, config) {
-                    console.log("Ok : "+data);
-                }).error(function (data, status, headers, config) {
-                    console.log("Error : "+data);
+            // $http.jsonp(url)
+            //     .success(function (data, status, headers, config) {
+            //         console.log("Ok : "+data);
+            //     }).error(function (data, status, headers, config) {
+            //         console.log("Error : "+data);
+            //     });
+
+            $http.get("http://smoothflow.io/apis/plan/priceplan.json")
+                .then(function (response) {
+                    console.log("Ok : " + data);
+                    $scope.palndetails=response.data;
                 });
         };
 
