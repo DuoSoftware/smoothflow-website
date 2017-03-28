@@ -49,9 +49,9 @@ angular.module('smoothflowwebsite', [
         console.log("application stated");
 
 
-
+        //28-03-2017 add by lakmini
         $scope.getplan = function () {
-            debugger;
+
             $http({
                 method: 'GET',
                 url: './json/priceplan.json',
@@ -66,7 +66,7 @@ angular.module('smoothflowwebsite', [
             })
                 .success(function (data) {
                     console.log("Ok : " + data);
-                    $scope.palndetails=data;
+                    $scope.palndetails = data;
 
                 })
                 .error(function (data) {
@@ -74,12 +74,13 @@ angular.module('smoothflowwebsite', [
                     console.log("Error : " + data);
                 });
 
-   
 
-          
+
+
         };
 
         $scope.getplan();
+        //============================================
     }])
     .controller('activityController', ['$scope', function ($scope) {
         console.log("activity controller hits");

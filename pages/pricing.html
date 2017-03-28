@@ -18,14 +18,14 @@
 <div ng-repeat="n in palndetails">
   <div class="plan">
       <h3 class="plan-title">{{n.name}}</h3>
-      <p class="plan-price">{{n.price}}<span class="plan-unit">per month</span></p>
+      <p class="plan-price">{{n.price}}<span class="plan-unit"> per month</span></p>
       <ul class="plan-features">
-        <li class="plan-feature">1<span class="plan-feature-name">Max. Users</span></li>
-        <li class="plan-feature">1<span class="plan-feature-name">No. of WF</span></li>
-        <li class="plan-feature">1000<span class="plan-feature-name">No. of Request</span></li>
-		<li class="plan-feature">N/A<span class="plan-feature-name">Additional User</span></li>
+        <li class="plan-feature">{{n.rules[0].amount}}<span class="plan-feature-name"> Max. Users</span></li>
+        <li class="plan-feature">{{n.rules[1].amount}}<span class="plan-feature-name"> No. of WF</span></li>
+        <li class="plan-feature">{{n.rules[2].amount}}<span class="plan-feature-name"> No. of Request</span></li>
+		<!--<li class="plan-feature">N/A<span class="plan-feature-name">Additional User</span></li>
 		<li class="plan-feature">N/A<span class="plan-feature-name">Additional Workflow</span></li>
-		<li class="plan-feature">N/A<span class="plan-feature-name">Additional 1000 Request</span></li>
+		<li class="plan-feature">N/A<span class="plan-feature-name">Additional 1000 Request</span></li>-->
       </ul>
       <a href="http://smoothflow.io/app/auth/#/auth" class="plan-button">Choose Plan</a>
     </div>
