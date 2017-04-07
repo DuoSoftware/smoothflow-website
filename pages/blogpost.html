@@ -1,0 +1,41 @@
+<div id="wrapper">
+
+    <div class="innertitle" data-sr="enter bottom and move 50px over 0.5s">
+        <div class="row">
+            <h1>Blog</h1>
+        </div>
+    </div>
+    <div class="innercontent">
+        <div class="vc_row wpb_row vc_row-fluid">
+            <div class="wpb_column vc_column_container vc_col-sm-2">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper"></div>
+                </div>
+            </div>
+            <div class="wpb_column vc_column_container vc_col-sm-8">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                            <div ng-include="getPostURL()"></div>
+                            <div ng-include="'./blogposts/recent_posts.html'"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wpb_column vc_column_container vc_col-sm-2">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper"></div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_row wpb_row vc_row-fluid">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-include="'include.footer.pre.description.html'"></div>
+</div>

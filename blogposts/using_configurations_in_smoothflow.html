@@ -1,0 +1,94 @@
+<div class="wpb_column vc_column_container vc_col-sm-10">
+    <div class="vc_column-inner ">
+        <div class="wpb_wrapper">
+            <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                <div class="wpb_wrapper">
+                    <h2>Using Configurations in Smoothflow Activities</h2>
+                    <p>This document explains how to use configuration files on Smoothflow. Please follow the instructions in
+                        the proper order to successfully perform the operations.
+                    </p>
+
+                    <p>If you wish to use values which can change overtime you can include them in the configuration section.
+                        This will allow you to change values in a file generated when the workflow is running for the first
+                        time. You could change the values as you need without having to rebuild the workflow again. For example
+                        you can use this for is URLs. Over time the service locations might change. Therefore, it is better
+                        to have those values on a config file which can be modified later.</p>
+
+                    <h4>Using Configuration on the Smoothflow App</h4>
+
+                    <p>To add configuration:</p>
+                    <p><b>1.  On the bottom right corner, click</b> <img src="http://www.smoothflow.io/wp-content/uploads/2017/01/con_window_icon.png"
+                        /> <b>. The Configurations window opens.</b></p>
+                    <img src="http://www.smoothflow.io/wp-content/uploads/2017/01/con_window.png" />
+                    <p></p>
+                    <p><b>2.  Enter the KEY and VALUE.</b></p>
+                    <p><b>3.  Select the Category (configuration in this case).</b></p>
+                    <p><b>4.  Click ADD. The entry will be added and displayed in the list.</b></p>
+                    <img src="http://www.smoothflow.io/wp-content/uploads/2017/01/add.png" />
+
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    <h4>Using values on configuration file on your custom activities</h4>
+
+                    <p>When you have a configuration file, it makes it easier for the developer to update or change constant
+                        values after the workflows has been built. Smoothflow development team has created a set of methods
+                        which developers can use to access these configuration features.</p>
+
+                    <p>First of all you need to import the "Common" package to use this feature on your custom activity.</p>
+
+                    <p><b>Importing the common package</b></br>
+                        import "processengine/Common"</p>
+                    <p>Once imported you could get a specific value by passing the KEY as an argument to the "GetConfigValue"
+                        method. It will return you a string value which is the value you are referring to.</p>
+
+                    <p><b>Get Config Value</b></br>
+                        <i>authURL := Common.GetConfigValue("authURL");</i></p>
+
+                    <p>If you need the entire configurations, use the following method.</p>
+
+                    <p><b>Get Config</b></br>
+                        <i>config := Common.GetConfigValue();</i></p>
+
+                    <p>If you have any new keys or need to update or save the edited configurations you can use the following
+                        method.</p>
+
+                    <p><b>Saving the config</b></br>
+                        <i>Common.SaveConfig(map[string]string);</i></p>
+
+                    <p>Please make sure you follow the guidelines to use the workflow in an optimal level.
+                    </p>
+
+
+                    <h4>Using configurations when the workflow is built or on client side</h4>
+                    <p>Once you have successfully downloaded the built workflow, you will get one executable file. When the
+                        workflow is running for the first time it will check whether the supporting configuration files are
+                        already existing. If not it will generate the actual configuration file with default values in it.
+                        The file will be saved in the same directory where the running workflow is currently saved. If the
+                        workflow is moved to a different directory the configuration file will again be generated with the
+                        default values.
+                    </p>
+                    <img src="http://www.smoothflow.io/wp-content/uploads/2017/01/workflow_optimal.png" />
+
+
+                    <p>As displayed in the above figure, only the executable will be downloaded from the Smoothflow server.
+                        The "Logs", "agent.config" and "settings.config" are generated automatically by the executable. All
+                        the configurations you have used when designing the workflow will be available on this configuration
+                        file. A sample configuration file will contain the standard JSON structure which is easy to maintain
+                        and edit.</p>
+                    <img src="http://www.smoothflow.io/wp-content/uploads/2017/01/workflow_optimal_json.png" />
+
+                    <p>All you need to do is to edit the values for the KEYs and replace them with the correct details.</p>
+
+                </div>
+            </div>
+
+            <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                <div class="wpb_wrapper">
+                    <h2></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
