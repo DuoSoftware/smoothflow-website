@@ -173,10 +173,10 @@ angular.module('smoothflowwebsite', [
                 method: 'GET',
                 url: 'http://smoothflow.io/app/json/controldata.json',
                 dataType: "json",
-                // headers: {
-                //     "Access-Control-Allow-Origin": "*",
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
                     
-                // },
+                },
 
             })
                 .success(function (data) {
