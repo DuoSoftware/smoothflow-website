@@ -89,7 +89,7 @@ angular.module('smoothflowwebsite', [
         $scope.getplan();
         //============================================
     }])
-    .controller('activityController', ['$scope', function ($scope) {
+    .controller('activityController', ['$scope','$http', function ($scope,$http) {
         console.log("activity controller hits");
 
         $scope.SearchKeyword = "";
@@ -165,16 +165,51 @@ angular.module('smoothflowwebsite', [
 
 
 
-    }]).controller('blogController', ['$scope','$route','$routeParams', function ($scope,$route,$routeParams) {
+        //02-05-2017 add by lakmini==============
+
+        $scope.categories = function () {
+            debugger;
+            $http({
+                method: 'GET',
+                url: 'http://smoothflow.io/app/json/controldata.json',
+                dataType: "json",
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+                    "Access-Control-Allow-Headers": "Content-Type, X-Requested-With",
+                    "Content-Type": "text/json"
+                },
+
+            })
+                .success(function (data) {
+                    console.log("Ok : " + data);
+
+
+                })
+                .error(function (data) {
+
+                    console.log("Error : " + data);
+                });
+
+
+
+
+        };
+
+        $scope.categories();
+        //============================================
+
+
+    }]).controller('blogController', ['$scope', '$route', '$routeParams', function ($scope, $route, $routeParams) {
         console.log("activity controller hits");
 
-        if($routeParams.post != null){
-            console.log("parameter: "+$routeParams.post);
+        if ($routeParams.post != null) {
+            console.log("parameter: " + $routeParams.post);
             $scope.post = $routeParams.post;
-            $scope.postURL = "./blogposts/"+$scope.post+".html"
+            $scope.postURL = "./blogposts/" + $scope.post + ".html"
         }
 
-        $scope.getPostURL = function(){
+        $scope.getPostURL = function () {
             return $scope.postURL;
         }
 
