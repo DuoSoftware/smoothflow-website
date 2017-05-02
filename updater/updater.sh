@@ -17,6 +17,12 @@ fi
 
 sudo cp -r  smoothflow-website/* /var/www/html/
 
+# getting latest plan details from the smoothflow-appserver-files repo
+echo "Getting latest price plan json from Smoothflow-appserver-files repo"
+cd /var/www/html/json/
+rm priceplan.json
+wget http://dev.smoothflow.io/apis/plan/priceplan.json
+
 echo "Setting apache settings"
 sudo chgrp -R www-data /var/www/html/
 sudo chown -R www-data /var/www/html/

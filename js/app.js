@@ -26,7 +26,10 @@ angular.module('smoothflowwebsite', [
             controller: 'activityController'
         }).when('/blog', {
             templateUrl: 'pages/blog.html',
-            controller: 'mainController'
+            controller: 'blogController'
+        }).when('/blog/:post', {
+            templateUrl: 'pages/blogpost.html',
+            controller: 'blogController'
         }).when('/about', {
             templateUrl: 'pages/about.html',
             controller: 'mainController'
@@ -43,13 +46,17 @@ angular.module('smoothflowwebsite', [
             templateUrl: 'pages/contact.html',
             controller: 'mainController'
         }).otherwise({ redirectTo: '/pagenotfound' });
+
+
     }])
 
     .controller('mainController', ['$scope', '$rootScope', '$location', '$mdDialog', '$http', function ($scope, $rootScope, $location, $mdDialog, $http) {
         console.log("application stated");
 
 
-        //28-03-2017 add by lakmini
+
+        //28-03-2017 add by lakmini==============
+
         $scope.getplan = function () {
 
             $http({
@@ -157,5 +164,31 @@ angular.module('smoothflowwebsite', [
         }
 
 
+
+    }]).controller('blogController', ['$scope','$route','$routeParams', function ($scope,$route,$routeParams) {
+        console.log("activity controller hits");
+
+        if($routeParams.post != null){
+            console.log("parameter: "+$routeParams.post);
+            $scope.post = $routeParams.post;
+            $scope.postURL = "./blogposts/"+$scope.post+".html"
+        }
+
+        $scope.getPostURL = function(){
+            return $scope.postURL;
+        }
+
+        //comment
+
+        $scope.blogposts = [
+            {
+                title: "Getting Started with Smoothflow",
+                filename: "getting_started_with_smoothflow"
+            },
+            {
+                title: "Using Configurations in Smoothflow Activities",
+                filename: "using_configurations_in_smoothflow"
+            }
+        ]
 
     }]);
