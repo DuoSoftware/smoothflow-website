@@ -17,14 +17,16 @@
                                 <div class="vc_column-inner">
                                     <div class="wpb_wrapper activity-categories-wrapper">
                                         <!-- category list goes here -->
-                                        <input type="text" placeholder="Search by name" ng-model="SearchKeyword">
+                                        <input type="text" placeholder="Search by name" ng-model="SearchKeyword" onchange="">
                                         <hr>
-                                        <ul class="category-list">
-                                            <li class="active-activity" ng-click="toggleCategory('all')"><a>All</a></li>
-                                            <li ng-click="toggleCategory('Payment')"><a>Payment</a></li>
-                                            <li><a>Database</a></li>
+                                        <ul class="category-list" ng-repeat="items in ClassToFilter()|filter:filterClass">
+
+                                            
+                                            <!--<li class="active-activity" ng-click="toggleCategory('all')"><a>All</a></li>-->
+                                            <li ng-click="toggleCategory(items) "><a>{{items.class}}</a></li>
+                                            <!--<li><a>Database</a></li>
                                             <li><a>Dataflow</a></li>
-                                            <li><a>About</a></li>
+                                            <li><a>About</a></li>-->
                                         </ul>
                                     </div>
                                 </div>
@@ -38,11 +40,11 @@
                     <div class="vc_row wpb_row vc_inner vc_row-fluid">
                         <div class="wpb_column vc_column_container vc_col-sm-10">
                             <!-- activities goes here -->
-                                <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activities"> 
+                                <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat"> 
                                     <div class="vc_column-inner">
                                         <!-- content goes here -->
                                         <img src="wp-content/themes/smoothflow/images/{{activity.icon}}" style="margin-left:12px;margin-bottom:15px;">
-                                        <span style="color: black;margin-left:12px">{{activity.name}}<span>
+                                        <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>
                                     </div>
                                 </div>
                             <!-- activities ends here -->

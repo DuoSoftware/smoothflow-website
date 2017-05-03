@@ -7845,12 +7845,13 @@ margin-top: 187px;
 
 .category-list > li:hover {
     color: #000;
-	background-color: #eee;
+	background-color: #caeef9;
 	cursor: pointer;
 }
 
 .active-activity {
     background-color: #4CAF50;
 }
+
 
 /* activity page styles ends here */

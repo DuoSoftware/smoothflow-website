@@ -89,58 +89,39 @@ angular.module('smoothflowwebsite', [
         $scope.getplan();
         //============================================
     }])
-    .controller('activityController', ['$scope','$http', function ($scope,$http) {
+    .controller('activityController', ['$scope', '$http', function ($scope, $http) {
         console.log("activity controller hits");
 
         $scope.SearchKeyword = "";
 
-        var activityList = [{
-            name: 'Act-On',
-            description: 'Act-On',
-            category: 'Payment',
-            icon: '/satelite.png'
-        }, {
-            name: 'Active Col',
-            description: 'Active Collabe description',
-            category: 'Database',
-            icon: '/cocktails.png'
-        }, {
-            name: 'Backpack',
-            description: 'Backpack description',
-            category: 'Payment',
-            icon: '/polaroid.png'
-        }, {
-            name: 'Bamboo',
-            description: 'Bamboo description',
-            category: 'Dataflow',
-            icon: '/recycling.png'
-        }, {
-            name: 'Coinbase',
-            description: 'Coinbase description',
-            category: 'Database',
-            icon: '/wine.png'
-        }];
 
         $scope.$watch('SearchKeyword', function (keyword) {
             var _activities;
-
-            if (!keyword.length) _activities = SearchActivitiesByCategory('all');
+            $scope.activitiescat = [];
+            if (!keyword.length) _activities = $scope._categories;
             else {
                 keyword = keyword.toLowerCase();
                 _activities = SearchActivitiesByName(keyword);
             }
 
-            $scope.activities = _activities;
-            console.log($scope.activities);
+            // $scope.activities = _activities;
+            $scope.activitiescat = _activities;
+            //console.log($scope.activities);
         });
 
         $scope.toggleCategory = function (category) {
-            $scope.activities = SearchActivitiesByCategory(category);
+
+            $scope.activities = SearchActivitiesByCategory(category.class);
+           // console.log($scope.activities);
+
+            $scope.SetCatIcon($scope.activities, false);
+
+            // $scope._activities= teamIsNew;
         }
 
         var SearchActivitiesByName = function (name) {
-            return activityList.filter(function (activity) {
-                var activity_name = activity.name.toLowerCase();
+            return $scope._categories.filter(function (activity) {
+                var activity_name = activity.Category.toLowerCase();
                 return (activity_name.search(name) !== -1);
             });
         }
@@ -149,12 +130,79 @@ angular.module('smoothflowwebsite', [
             if (category === 'all')
                 return angular.copy(activityList);
             else {
-                return activityList.filter(function (activity) {
-                    return (activity.category === category)
+                return $scope.categorieslist.filter(function (activity) {
+                    return (activity.class === category)
                 });
             }
         }
+        $scope.getAllCategory = function () {
+            // $scope.activities = $scope.categorieslist;
+            $scope.SetCatIcon($scope.categorieslist,true);
+        }
+        //use for set icons and remove duplicates ----- 02-05-2017 add by lakmini
+        $scope.SetCatIcon = function (activities, _type) {
+            $scope.indexedCat = [];
+            $scope.activitiescat = [];
+            activities.forEach(function (element) {
+                var teamIsNew = $scope.indexedCat.indexOf(element.Category) == -1;;
+                if (teamIsNew) {
+                    if (element.class == 'Tools') {
+                        if (element.Category == 'Flow Controls') {
+                            { element.icon = '/protractor.png'; }
+                        } else if (element.Category == 'Collections') {
+                            { element.icon = '/archives.png'; }
+                        } else if (element.Category == 'Switch Controls') {
+                            { element.icon = '/hierarchy-structure.png'; }
+                        } else if (element.Category == 'Common') {
+                            { element.icon = '/cogwheel.png'; }
+                        } else if (element.Category == 'Calculations') {
+                            { element.icon = '/calculator (1).png'; }
+                        }
+                    } else if (element.class == 'Payments') {
+                        if (element.Category == 'Payments') {
+                            { element.icon = '/light-bulb.png'; }
+                        } else if (element.Category == 'CloudCharge') {
+                            { element.icon = '/protractor.png'; }
+                        } else if (element.Category == 'CloudCharge Azure') {
+                            { element.icon = '/protractor.png'; }
+                        }
+                    } else if (element.class == 'Communication') {
+                        if (element.Category == 'Email') {
+                            { element.icon = '/mail.png'; }
+                        } else if (element.Category == 'SMS') {
+                            { element.icon = '/smartphone.png'; }
+                        } else if (element.Category == 'HTTP') {
+                            { element.icon = '/browser.png'; }
+                        }
+                    } else if (element.class == 'Storage') {
+                        if (element.Category == 'File') {
+                            { element.icon = '/browser (1).png'; }
+                        } else if (element.Category == 'Redis') {
+                            { element.icon = '/archives.png'; }
+                        } else if (element.Category == 'Cloud Data Store') {
+                            { element.icon = '/cloud-computing.png'; }
+                        }
+                    } else if (element.class == 'Social') {
+                        if (element.Category == 'Twitter') {
+                            { element.icon = '/twitter.png'; }
+                        } else if (element.Category == 'Facebook') {
+                            { element.icon = '/facebook.png'; }
+                        }
+                    } else {
+                        { element.icon = '/satelite.png'; }
+                    }
 
+
+                    $scope.indexedCat.push(element.Category);
+                    $scope.activitiescat.push(element);
+                }
+            }, this);
+            if (_type) {
+                $scope._categories = $scope.activitiescat;
+            }
+
+
+        }
         var init = function () {
             var _categories = [];
 
@@ -168,21 +216,25 @@ angular.module('smoothflowwebsite', [
         //02-05-2017 add by lakmini==============
 
         $scope.categories = function () {
-            debugger;
+            // debugger;
             $http({
                 method: 'GET',
-                url: 'http://smoothflow.io/app/json/controldata.json',
+                url: './json/controldata.json',
                 dataType: "json",
                 headers: {
                     "Access-Control-Allow-Origin": "*",
-                    
+                    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+                    "Access-Control-Allow-Headers": "Content-Type, X-Requested-With",
+                    "Content-Type": "text/json"
+
                 },
 
             })
                 .success(function (data) {
-                    console.log("Ok : " + data);
-
-
+                  //  console.log(data);
+                    $scope.categorieslist = data.Controls;
+                    $scope.ClassToFilter();
+                    $scope.getAllCategory();
                 })
                 .error(function (data) {
 
@@ -195,6 +247,26 @@ angular.module('smoothflowwebsite', [
         };
 
         $scope.categories();
+
+
+
+        var indexedClass = [];
+
+
+        $scope.ClassToFilter = function () {
+            indexedClass = [];
+            return $scope.categorieslist;
+        }
+
+        $scope.filterClass = function (Class) {
+            var teamIsNew = indexedClass.indexOf(Class.class) == -1;
+            if (teamIsNew) {
+                indexedClass.push(Class.class);
+            }
+            return teamIsNew;
+        }
+        // $scope.getclass = function () {}
+
         //============================================
 
 
