@@ -7855,3 +7855,85 @@ margin-top: 187px;
 
 
 /* activity page styles ends here */
+/* ------------------------- Separate line ------------------------- */
+/* acticity deatil page styles starts here */
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+    font-size: 17px;
+}
+ul.breadcrumb li {display: inline;}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+.variablelist{
+	/*border: #d6d6d6;*/
+    /*border-style: solid;*/
+    margin-right: 14px;
+	    color: black;
+		margin-bottom: 15px;
+}
+.activityvariable{
+    /* background-color: lavender; */
+    /*border-bottom-color: #aba8a8;*/
+    /*border-bottom-width: 1px;*/
+    /* padding-bottom: 10px; */
+    /*border-bottom-style: solid;*/
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;	
+}
+
+
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+	ul#horizontal-list li {
+		display: inline;
+	}
+
+	.activitylist{
+	background-color: rgba(38, 166, 209, 0.29);
+		    /*background-color: lavender;*/
+    /* border-bottom-color: #fbfbfb; */
+    /* border-bottom-width: 9px; */
+    /* padding-bottom: 10px; */
+    /*border-bottom-style: solid;*/
+    /* padding-top: 10px; */
+    padding: 20px;
+    display: inline-block;
+    margin: 2px;
+	}
+
+	a.activitya{
+		color: #0275d8;
+	}
+
+a.activitya:hover, a.activitya:active {
+	/*font-size: 150%; */
+	/*background-color: rgba(38, 166, 209, 0.65);*/
+	zoom:1;
+	}
+
+	span.activitya:hover{
+	/*font-size: 150%; */
+	/*background-color: rgba(38, 166, 209, 0.65);*/
+	zoom:2;
+	color: #909090;
+	}
+/* acticity deatil page styles ends here */

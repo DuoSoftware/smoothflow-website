@@ -4,6 +4,7 @@ angular.module('smoothflowwebsite', [
     'ngRoute',
     'ngMaterial',
     'ngMessages'
+    
 ]).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/', {
@@ -45,6 +46,9 @@ angular.module('smoothflowwebsite', [
         }).when('/contact', {
             templateUrl: 'pages/contact.html',
             controller: 'mainController'
+        }).when('/details/:DisplayName', {
+            templateUrl: 'pages/activitydetails.html',
+            controller: 'activityController'
         }).otherwise({ redirectTo: '/pagenotfound' });
 
 
@@ -74,29 +78,28 @@ angular.module('smoothflowwebsite', [
                 .success(function (data) {
                     console.log("Ok : " + data);
                     $scope.palndetails = data;
-
                 })
                 .error(function (data) {
-
                     console.log("Error : " + data);
                 });
-
-
-
-
         };
 
         $scope.getplan();
         //============================================
     }])
-    .controller('activityController', ['$scope', '$http', function ($scope, $http) {
+    .controller('activityController', ['$scope', '$http', '$location', '$rootScope', '$routeParams', function ($scope, $http, $location, $rootScope, $routeParams) {
         console.log("activity controller hits");
 
         $scope.SearchKeyword = "";
 
 
+        //load activity details
+        $scope.detailsName = $routeParams.DisplayName;
+        //======
+        console.log($scope.detailsName);
         $scope.$watch('SearchKeyword', function (keyword) {
             var _activities;
+            $scope.actlist = false;
             $scope.activitiescat = [];
             if (!keyword.length) _activities = $scope._categories;
             else {
@@ -104,22 +107,23 @@ angular.module('smoothflowwebsite', [
                 _activities = SearchActivitiesByName(keyword);
             }
 
-            // $scope.activities = _activities;
+
             $scope.activitiescat = _activities;
-            //console.log($scope.activities);
+
         });
 
         $scope.toggleCategory = function (category) {
 
             $scope.activities = SearchActivitiesByCategory(category.class);
-           // console.log($scope.activities);
-
+            console.log($scope.activities);
+            $scope.actlist = false;
             $scope.SetCatIcon($scope.activities, false);
 
-            // $scope._activities= teamIsNew;
+
         }
 
         var SearchActivitiesByName = function (name) {
+            $scope.actlist = false;
             return $scope._categories.filter(function (activity) {
                 var activity_name = activity.Category.toLowerCase();
                 return (activity_name.search(name) !== -1);
@@ -137,14 +141,14 @@ angular.module('smoothflowwebsite', [
         }
         $scope.getAllCategory = function () {
             // $scope.activities = $scope.categorieslist;
-            $scope.SetCatIcon($scope.categorieslist,true);
+            $scope.SetCatIcon($scope.categorieslist, true);
         }
         //use for set icons and remove duplicates ----- 02-05-2017 add by lakmini
         $scope.SetCatIcon = function (activities, _type) {
             $scope.indexedCat = [];
             $scope.activitiescat = [];
             activities.forEach(function (element) {
-                var teamIsNew = $scope.indexedCat.indexOf(element.Category) == -1;;
+                var teamIsNew = $scope.indexedCat.indexOf(element.Category) == -1;
                 if (teamIsNew) {
                     if (element.class == 'Tools') {
                         if (element.Category == 'Flow Controls') {
@@ -231,7 +235,7 @@ angular.module('smoothflowwebsite', [
 
             })
                 .success(function (data) {
-                  //  console.log(data);
+                    //  console.log(data);
                     $scope.categorieslist = data.Controls;
                     $scope.ClassToFilter();
                     $scope.getAllCategory();
@@ -268,7 +272,23 @@ angular.module('smoothflowwebsite', [
         // $scope.getclass = function () {}
 
         //============================================
+        // add by lakmini 22-05-2017  
+        $scope.getAtivityDetails = function (category, catImage) {
 
+            $scope.actlist = true;
+            // alert(category);
+            $scope.selectCategory = category;
+            $scope.selectcatImage = catImage;
+
+        };
+
+        $scope.changeLocationdetails = function (details) {
+            
+            $rootScope.ActivityDetailsObj=details;
+            console.log($rootScope.ActivityDetailsObj);
+            $location.path("/details/"+$rootScope.ActivityDetailsObj.DisplayName);
+        };
+        //=========================================
 
     }]).controller('blogController', ['$scope', '$route', '$routeParams', function ($scope, $route, $routeParams) {
         console.log("activity controller hits");

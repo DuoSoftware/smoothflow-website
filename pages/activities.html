@@ -5,7 +5,7 @@
             <h1>Activities</h1>
         </div>
     </div>
-    <div class="innercontent" >
+    <div class="innercontent">
         <div class="vc_row wpb_row vc_row-fluid">
             <div class="wpb_column vc_column_container vc_col-sm-4">
                 <div class="vc_column-inner">
@@ -21,7 +21,7 @@
                                         <hr>
                                         <ul class="category-list" ng-repeat="items in ClassToFilter()|filter:filterClass">
 
-                                            
+
                                             <!--<li class="active-activity" ng-click="toggleCategory('all')"><a>All</a></li>-->
                                             <li ng-click="toggleCategory(items) "><a>{{items.class}}</a></li>
                                             <!--<li><a>Database</a></li>
@@ -35,25 +35,48 @@
                     </div>
                 </div>
             </div>
-            <div class="wpb_column vc_column_container vc_col-sm-8">
-                <div class="vc_column-inner">
-                    <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                        <div class="wpb_column vc_column_container vc_col-sm-10">
-                            <!-- activities goes here -->
-                                <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat"> 
-                                    <div class="vc_column-inner">
+            <!-- Start wpb_column vc_column_container vc_col-sm-8-->
+            <div ng-hide="actlist">
+                <div class="wpb_column vc_column_container vc_col-sm-8">
+                    <div class="vc_column-inner">
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                            <div class="wpb_column vc_column_container vc_col-sm-10">
+                                <!-- activities goes here -->
+                                <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat">
+                                    <div class="vc_column-inner" ng-click="getAtivityDetails(activity.Category,activity.icon);">
                                         <!-- content goes here -->
+
                                         <img src="wp-content/themes/smoothflow/images/{{activity.icon}}" style="margin-left:12px;margin-bottom:15px;">
-                                        <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>
+                                        <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>                                        .
+
                                     </div>
                                 </div>
-                            <!-- activities ends here -->
-                        </div>
-                        <div class="wpb_column vc_column_container vc_col-sm-2">
+                                <!-- activities ends here -->
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-2">
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
+            <!-- end wpb_column vc_column_container vc_col-sm-8 -->
+            <!-- Start activity details-->
+            <div ng-show="actlist">
+                <div class="wpb_column vc_column_container vc_col-sm-8">
+                    <img src="wp-content/themes/smoothflow/images/{{selectcatImage}}" style="margin-left:12px;margin-bottom:15px;">
+                    <span style="color: black;font-size: 17px;padding-left: 10px;">{{selectCategory}}</span>
+                    <hr/>
+                    <div style="margin-bottom: 35px;">
+                        <div ng-repeat="activity in categorieslist |filter:selectCategory" class="activitylist">
+
+                            <a class="activitya" ng-click="changeLocationdetails(activity)"><span class="activitya">{{activity.DisplayName}}</span></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- end activity details -->
         </div>
     </div>
     <div ng-include="'include.footer.pre.description.html'"></div>

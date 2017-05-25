@@ -1,0 +1,60 @@
+<div id="wrapper">
+    <div class="innertitle" data-sr="enter bottom and move 50px over 0.5s">
+        <div class="row">
+                 <ul class="breadcrumb">
+                <li><a href="#/activities">{{ActivityDetailsObj.class}}</a></li>
+                <li><a href="#/activities">{{ActivityDetailsObj.Category}}</a></li>
+                <li><a href="">{{detailsName}}</a></li>
+               
+            </ul>
+        </div>
+    </div>
+    <div class="innercontent">
+        <div class="vc_row wpb_row vc_row-fluid inner">
+         
+            <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                <div class="wpb_column vc_column_container">
+                    
+                    <hr/>
+                    <h5 style="text-align: left;color: #3cc2a8;">{{detailsName}}</h5>
+                    <md-icon md-svg-icon="{{ActivityDetailsObj.Icon}}"></md-icon><span style="text-align: left;color: #000;">{{ActivityDetailsObj.Description}}</span>
+                    
+
+                    <br/> <br/>
+                    <div layout="row">
+                        <div flex class="variablelist">
+                            <span style="text-align: left;color: #000;">In Argument</span>
+                            <hr/>
+                            <div ng-repeat="Variables in ActivityDetailsObj.Variables | filter : 'InArgument'" class="activityvariable">
+                               
+                                <i class="fa fa-check-circle" ng-style="{color: {true:'red',false:'green'}[Variables.Priority == 'Mandatory']}"></i>
+                                <span ng-style="{color: {true:'#a2a0a0',false:'#a2a0a0'}[Variables.Priority == 'Mandatory']}" ;>{{Variables.Key}}</span>
+                                
+                                <span class="md-caption" style="background-color: #1abc9c;color: snow;padding: 4px;">{{Variables.DataType}}</span>
+                                
+                            </div>
+                        </div>
+                        <div flex class="variablelist">
+                            <span style="text-align: left;color: #000;">Out Argument</span>
+                            <hr/>
+                            <div ng-repeat="Variables in ActivityDetailsObj.Variables | filter : 'OutArgument'" class="activityvariable">
+                               
+                                <i class="fa fa-check-circle" ng-style="{color: {true:'red',false:'green'}[Variables.Priority == 'Mandatory']}"></i>
+                                <span ng-style="{color: {true:'#a2a0a0',false:'#a2a0a0'}[Variables.Priority == 'Mandatory']}" ;>{{Variables.Key}}</span>
+                                
+                                <span class="md-caption" style="background-color: #1abc9c;color: snow;padding: 4px;">{{Variables.DataType}}</span>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <div ng-include="'include.footer.pre.description.html'"></div>
+</div>
