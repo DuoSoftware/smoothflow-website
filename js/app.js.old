@@ -46,5 +46,5 @@ angular.module('smoothflowwebsite', [
     }])
 
     .controller('mainController', ['$scope', '$rootScope', '$location','$mdDialog', function ($scope, $rootScope, $location, $mdDialog) {
-        console.log("application stated");
+        //console.log("application stated");
     }]);

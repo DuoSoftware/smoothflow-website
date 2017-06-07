@@ -55,7 +55,7 @@ angular.module('smoothflowwebsite', [
     }])
 
     .controller('mainController', ['$scope', '$rootScope', '$location', '$mdDialog', '$http', function ($scope, $rootScope, $location, $mdDialog, $http) {
-        console.log("application stated");
+        //console.log("application stated");
 
 
 
@@ -76,11 +76,11 @@ angular.module('smoothflowwebsite', [
 
             })
                 .success(function (data) {
-                    console.log("Ok : " + data);
+                   // console.log("Ok : " + data);
                     $scope.palndetails = data;
                 })
                 .error(function (data) {
-                    console.log("Error : " + data);
+                    //console.log("Error : " + data);
                 });
         };
 
@@ -88,7 +88,7 @@ angular.module('smoothflowwebsite', [
         //============================================
     }])
     .controller('activityController', ['$scope', '$http', '$location', '$rootScope', '$routeParams', function ($scope, $http, $location, $rootScope, $routeParams) {
-        console.log("activity controller hits");
+        //console.log("activity controller hits");
 
         $scope.SearchKeyword = "";
 
@@ -96,7 +96,7 @@ angular.module('smoothflowwebsite', [
         //load activity details
         $scope.detailsName = $routeParams.DisplayName;
         //======
-        console.log($scope.detailsName);
+       // console.log($scope.detailsName);
         $scope.$watch('SearchKeyword', function (keyword) {
             var _activities;
             $scope.actlist = false;
@@ -115,7 +115,7 @@ angular.module('smoothflowwebsite', [
         $scope.toggleCategory = function (category) {
 
             $scope.activities = SearchActivitiesByCategory(category.class);
-            console.log($scope.activities);
+           // console.log($scope.activities);
             $scope.actlist = false;
             $scope.SetCatIcon($scope.activities, false);
 
@@ -242,7 +242,7 @@ angular.module('smoothflowwebsite', [
                 })
                 .error(function (data) {
 
-                    console.log("Error : " + data);
+                    //console.log("Error : " + data);
                 });
 
 
@@ -285,16 +285,16 @@ angular.module('smoothflowwebsite', [
         $scope.changeLocationdetails = function (details) {
             
             $rootScope.ActivityDetailsObj=details;
-            console.log($rootScope.ActivityDetailsObj);
+           // console.log($rootScope.ActivityDetailsObj);
             $location.path("/details/"+$rootScope.ActivityDetailsObj.DisplayName);
         };
         //=========================================
 
     }]).controller('blogController', ['$scope', '$route', '$routeParams', function ($scope, $route, $routeParams) {
-        console.log("activity controller hits");
+       // console.log("activity controller hits");
 
         if ($routeParams.post != null) {
-            console.log("parameter: " + $routeParams.post);
+           // console.log("parameter: " + $routeParams.post);
             $scope.post = $routeParams.post;
             $scope.postURL = "./blogposts/" + $scope.post + ".html"
         }
