@@ -16,7 +16,7 @@
                     <div class="contact-info">
                         <div class="email block">
                             <h3>Email Us</h3>
-                            <a href="mailto:info@smoothflow.io">info@smoothflow.io</a> </div>
+                            <a href="mailto:support@smoothflow.io"> support@smoothflow.io </a> </div>
                         <div class="address block">
                             <h3>We are located at</h3>
                             170 S Green Valley Parkway, <br/> Suite 300, Henderson, <br/> Nevada 89012 </div>
@@ -25,25 +25,18 @@
                             <a href="tel:+18705056540">+1 870-505-6540</a> </div>
                     </div>
                     <div class="contact-form">
-                        <div role="form" class="wpcf7" id="wpcf7-f6-p5-o1" lang="en-US" dir="ltr">
-                            <div class="screen-reader-response"></div>
-                            <form action="/contact/#wpcf7-f6-p5-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-                                <div style="display: none;">
-                                    <input type="hidden" name="_wpcf7" value="6" />
-                                    <input type="hidden" name="_wpcf7_version" value="4.5" />
-                                    <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f6-p5-o1" />
-                                    <input type="hidden" name="_wpnonce" value="1b475ac3af" />
-                                </div>
-                                <div data-sr="wait 0.3s"><span class="wpcf7-form-control-wrap text-403"><input type="text" name="text-403" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact-form-name" aria-required="true" aria-invalid="false" placeholder="Your Name..." /></span></div>
-                                <div data-sr="wait 0.5s"><span class="wpcf7-form-control-wrap email-404"><input type="email" name="email-404" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email contact-form-email" aria-required="true" aria-invalid="false" placeholder="Your email address..." /></span></div>
-                                <div data-sr="wait 0.7s"><span class="wpcf7-form-control-wrap text-405"><input type="text" name="text-405" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact-form-subject" aria-required="true" aria-invalid="false" placeholder="Subject..." /></span></div>
-                                <div data-sr="wait 0.9s"><span class="wpcf7-form-control-wrap textarea-121"><textarea name="textarea-121" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required contact-form-message" aria-required="true" aria-invalid="false" placeholder="Write a message..."></textarea></span></div>
-                                <div class="btn" data-sr="wait 1.1s"><input type="submit" value="Send Message" class="wpcf7-form-control wpcf7-submit submit"
-                                    /></div>
-                                <div class="wpcf7-response-output wpcf7-display-none"></div>
-                            </form>
-                        </div>
+                        <input ng-model="Emaildetails.name" type="text" name="text-403" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact-form-name"
+                            aria-required="true" aria-invalid="false" placeholder="Your Name..." />
+                        <input ng-model="Emaildetails.email" type="email" name="email-404" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email contact-form-email"
+                            aria-required="true" aria-invalid="false" placeholder="Your email address..." />
+                        <input ng-model="Emaildetails.subject" type="text" name="text-405" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact-form-subject"
+                            aria-required="true" aria-invalid="false" placeholder="Subject..." />
+                        <textarea ng-model="Emaildetails.body" name="textarea-121" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required contact-form-message"
+                            aria-required="true" aria-invalid="false" placeholder="Write a message..."></textarea>
+
+                        <input ng-click="sendMailContact(Emaildetails)" value="Send Message" class="" /></div>
+                    <div class="wpcf7-response-output wpcf7-display-none">
+
                     </div>
                 </div>
             </div>

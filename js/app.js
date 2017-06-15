@@ -6,7 +6,7 @@ angular.module('smoothflowwebsite', [
     'ngMessages',
     'vAccordion',
     'ngAnimate'
-    
+
 ]).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/', {
@@ -47,7 +47,7 @@ angular.module('smoothflowwebsite', [
             controller: 'mainController'
         }).when('/contact', {
             templateUrl: 'pages/contact.html',
-            controller: 'mainController'
+            controller: 'contactController'
         }).when('/details/:DisplayName', {
             templateUrl: 'pages/activitydetails.html',
             controller: 'activityController'
@@ -78,7 +78,7 @@ angular.module('smoothflowwebsite', [
 
             })
                 .success(function (data) {
-                   // console.log("Ok : " + data);
+                    // console.log("Ok : " + data);
                     $scope.palndetails = data;
                 })
                 .error(function (data) {
@@ -98,7 +98,7 @@ angular.module('smoothflowwebsite', [
         //load activity details
         $scope.detailsName = $routeParams.DisplayName;
         //======
-       // console.log($scope.detailsName);
+        // console.log($scope.detailsName);
         $scope.$watch('SearchKeyword', function (keyword) {
             var _activities;
             $scope.actlist = false;
@@ -117,7 +117,7 @@ angular.module('smoothflowwebsite', [
         $scope.toggleCategory = function (category) {
 
             $scope.activities = SearchActivitiesByCategory(category.class);
-           // console.log($scope.activities);
+            // console.log($scope.activities);
             $scope.actlist = false;
             $scope.SetCatIcon($scope.activities, false);
 
@@ -285,18 +285,18 @@ angular.module('smoothflowwebsite', [
         };
 
         $scope.changeLocationdetails = function (details) {
-            
-            $rootScope.ActivityDetailsObj=details;
-           // console.log($rootScope.ActivityDetailsObj);
-            $location.path("/details/"+$rootScope.ActivityDetailsObj.DisplayName);
+
+            $rootScope.ActivityDetailsObj = details;
+            // console.log($rootScope.ActivityDetailsObj);
+            $location.path("/details/" + $rootScope.ActivityDetailsObj.DisplayName);
         };
         //=========================================
 
     }]).controller('blogController', ['$scope', '$route', '$routeParams', function ($scope, $route, $routeParams) {
-       // console.log("activity controller hits");
+        // console.log("activity controller hits");
 
         if ($routeParams.post != null) {
-           // console.log("parameter: " + $routeParams.post);
+            // console.log("parameter: " + $routeParams.post);
             $scope.post = $routeParams.post;
             $scope.postURL = "./blogposts/" + $scope.post + ".html"
         }
@@ -317,5 +317,27 @@ angular.module('smoothflowwebsite', [
                 filename: "using_configurations_in_smoothflow"
             }
         ]
+
+    }]).controller('contactController', ['$scope', '$rootScope', '$http', function ($scope, $rootScope, $http) {
+        debugger;
+        $scope.sendMailContact = function (emailDetails) {
+            console.log(emailDetails)
+            // $http.post('php/sendemail.php').success(function (data) {
+            //     $scope.details = data;
+            // })
+
+            $http({
+                url: "php/sendemail.php",
+                method: "POST",
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                data: {
+                    data: emailDetails
+                }
+            }).success(function (data, status, headers, config) {
+                console.log(data);
+            }).error(function (data, status, headers, config) {
+                console.log(data);
+            });
+        }
 
     }]);
