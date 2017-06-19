@@ -3,10 +3,10 @@
 require 'PHPMailer/PHPMailerAutoload.php';
 $data = json_decode(file_get_contents("php://input"));
 
-echo $data->data->name;
-echo $data->data->email;
-echo $data->data->subject;
-echo $data->data->body;
+// echo $data->data->name;
+// echo $data->data->email;
+// echo $data->data->subject;
+// echo $data->data->body;
 //Create a new PHPMailer instance
 $mail = new PHPMailer;
 // Set PHPMailer to use the sendmail transport
@@ -17,7 +17,7 @@ $mail->Username = 'smoothflownew@gmail.com';  // SMTP username
 $mail->Password = 'smooth@123';    // SMTP password
 $mail->SMTPSecure = 'tls';   // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;    // TCP port to connect to
-$mail->SMTPDebug = 2;
+// $mail->SMTPDebug = 2;
 //Set who the message is to be sent from
 $mail->setFrom('support@smoothflow.io', $data->data->name);
 //Set an alternative reply-to address
