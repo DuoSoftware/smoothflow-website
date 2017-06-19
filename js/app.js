@@ -335,8 +335,12 @@ angular.module('smoothflowwebsite', [
                 }
             }).success(function (data, status, headers, config) {
                 console.log(data);
+                $scope.message="Email sent successfully";
+
+                console.log($scope.message);
             }).error(function (data, status, headers, config) {
                 console.log(data);
+                $scope.message="";
             });
         }
 

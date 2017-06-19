@@ -13,18 +13,18 @@ $mail = new PHPMailer;
 $mail->isSMTP();
 $mail->Host = 'smtp.gmail.com';       // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                // Enable SMTP authentication
-$mail->Username = 'support@smoothflow.io';  // SMTP username
-$mail->Password = 'Smoothflow@123';    // SMTP password
+$mail->Username = 'smoothflownew@gmail.com';  // SMTP username
+$mail->Password = 'smooth@123';    // SMTP password
 $mail->SMTPSecure = 'tls';   // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;    // TCP port to connect to
-
+$mail->SMTPDebug = 2;
 //Set who the message is to be sent from
-$mail->setFrom($data->data->email, $data->data->name);
+$mail->setFrom('support@smoothflow.io', $data->data->name);
 //Set an alternative reply-to address
 $mail->addReplyTo($data->data->email, $data->data->name);
 //Set who the message is to be sent to
 $mail->addAddress('shehan@duosoftware.com', 'Shehan');
-$mail->addAddress('lakmini@duosoftware.com', 'Shehan');
+$mail->addAddress('lakmini@duosoftware.com', 'lakmini');
 $mail->addAddress('support@smoothflow.io', 'smoothflow.io');
 //Set the subject line
 $mail->Subject = $data->data->subject;
