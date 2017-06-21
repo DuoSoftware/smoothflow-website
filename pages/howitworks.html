@@ -11,10 +11,9 @@
 				<div class="vc_column-inner ">
 					<div class="wpb_wrapper">
 						<div class="wpb_text_column wpb_content_element  topic">
-							<div class="wpb_wrapper">
-								<h2>What is workflows</h2>
-								<p>the sequence of industrial, administrative, or other processes through which a piece of work passes from initiation
-									to completion.</p>
+							<div class="wpb_wrapper highlight-green-light">
+								<h2>What is workflows?</h2>
+								<i class="definition">"The sequence of industrial, administrative, or other processes through which a piece of work passes from initiation to completion"</i>
 
 							</div>
 						</div>
@@ -56,17 +55,16 @@
 			<div class="wpb_column vc_column_container vc_col-sm-12">
 				<div class="vc_column-inner ">
 					<div class="wpb_wrapper">
-						<div class="wpb_text_column wpb_content_element ">
+						<div class="wpb_text_column wpb_content_element topic">
 							<div class="wpb_wrapper">
 								<h2>Videos</h2>
 
 							</div>
 						</div>
-						<div class="vc_empty_space" style="height: 90px"><span class="vc_empty_space_inner"></span></div>
 						<div class="vc_row wpb_row vc_inner vc_row-fluid">
 							<div class="wpb_column vc_column_container vc_col-sm-12">
 								<div class="vc_column-inner ">
-									<div class="wpb_wrapper">
+									<div class="wpb_wrapper video_column">
 										<div class="wpb_text_column wpb_content_element  vc_custom_1479210498035">
 											<div class="wpb_wrapper">
 												<p>
@@ -101,40 +99,42 @@
 				</div>
 			</div>
 		</div>
-		<div class="vc_row wpb_row vc_row-fluid inner">
-			<div class="wpb_column vc_column_container vc_col-sm-12">
-				<div class="vc_column-inner ">
-					<div class="wpb_wrapper">
-						<div class="wpb_text_column wpb_content_element ">
-							<div class="wpb_wrapper">
-								<h2>Tutorials</h2>
-								<ul class="pdf">
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/Configurations.pdf">Configurations</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/CreatingActivities.pdf">Creating Activities</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/CreatingaWorkflow.pdf">Creating Workflows</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/DownloadingaWorkflowasExecutable.pdf">Downloading a workflow as executable</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/EditingaWorkflow.pdf">Editing a workflow</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/FirstTimeLogin-CustomerBoarding.pdf">First time login &#8211; Customer boarding</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/InvitingUsers.pdf">Inviting Users</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/LeftPane.pdf">Left Pane</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/ListofavailableNodes.pdf">List of available nodes</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/LogginginandLoggingout.pdf">Logging in and Logging out</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/OpeningaWorkflow.pdf">Opening a workflow</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/SavingaWorkflow.pdf">Saving a workflow</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/SigningUpwithSmoothflow.pdf">Signing up with Smoothflow</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/SmoothFlowSettings.pdf">Smoothflow Settings</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/TheMainUserInterface.pdf">The Main user interface</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/ToolbarControls.pdf">Toolbar Controls</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/UsingArgumentsinWorkflows.pdf">Using arguments in Workflow</a></li>
-									<li><a href="http://www.smoothflow.io/wp-content/uploads/2016/11/WorkingwithConditionalStatements.pdf">Working with conditional statements</a></li>
-								</ul>
 
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div class="highlight-blue">
+            <div class="vc_row wpb_row vc_row-fluid inner">
+                <div class="wpb_column vc_column_container vc_col-sm-12">
+                    <div class="vc_column-inner ">
+                        <div class="wpb_wrapper">
+                            <div class="wpb_text_column wpb_content_element topic">
+                                <div class="wpb_wrapper">
+                                    <h2>Tutorials</h2>
+                                    <div class="row pos-rel">
+                                        <div class="large-3 columns">
+                                            <ul class="pdf">
+                                                <li ng-repeat="tute in tutePDFUrls"><a ng-click="setUrlForTutePDF(tute)" href="" ng-style="selectedTute == tute.name ? {'font-weight':'bold','color':'#fff'} : null">{{tute.name}}</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="large-9 columns">
+                                            <div class="pdf-loading">
+                                                <img src="assets/images/pdf1600.png" alt="PDF reader">
+                                                <div class="text-center">
+                                                    <small>Select a tutorial to view</small>
+                                                </div>
+                                            </div>
+                                            <div class="PDF" ng-if="pdfLoading">
+                                                <object data="{{activeTutePDFUrl}}" type="application/pdf">
+                                                </object>
+                                            </div>
+                                            <!--<iframe src="http://www.smoothflow.io/wp-content/uploads/2016/11/Configurations.pdf" width="600" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html"></iframe>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 	</div>
 
 	<div ng-include="'include.footer.pre.description.html'"></div>

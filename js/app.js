@@ -56,7 +56,7 @@ angular.module('smoothflowwebsite', [
 
     }])
 
-    .controller('mainController', ['$scope', '$rootScope', '$location', '$mdDialog', '$http', function ($scope, $rootScope, $location, $mdDialog, $http) {
+    .controller('mainController', ['$scope', '$rootScope', '$location', '$mdDialog', '$http','$timeout', function ($scope, $rootScope, $location, $mdDialog, $http,$timeout) {
         //console.log("application stated");
 
 
@@ -87,6 +87,72 @@ angular.module('smoothflowwebsite', [
         };
 
         $scope.getplan();
+
+        // Kasun_Wijeratne_6_21_2017
+		$scope.tutePDFUrls = [{
+			name:'Configurations',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/Configurations.pdf'
+		},{
+			name:'Creating',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/CreatingActivities.pdf'
+		},{
+			name:'Creating workflow',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/CreatingaWorkflow.pdf'
+		},{
+			name:'Download a workflow as executable',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/DownloadingaWorkflowasExecutable.pdf'
+		},{
+			name:'Editing an workflow',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/EditingaWorkflow.pdf'
+		},{
+			name:'First time login &#8211; Customer boarding',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/FirstTimeLogin-CustomerBoarding.pdf'
+		},{
+			name:'Inviting users',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/InvitingUsers.pdf'
+		},{
+			name:'Left pane',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/LeftPane.pdf'
+		},{
+			name:'List of available nodes',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/ListofavailableNodes.pdf'
+		},{
+			name:'Logging in and Logging out',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/LogginginandLoggingout.pdf'
+		},{
+			name:'Opening a workflow',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/OpeningaWorkflow.pdf'
+		},{
+			name:'Saving a workflow',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/SavingaWorkflow.pdf'
+		},{
+			name:'Signing up with SmoothFlow',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/SigningUpwithSmoothflow.pdf'
+		},{
+			name:'SmoothFlow settings',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/SmoothFlowSettings.pdf'
+		},{
+			name:'The main user interface',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/TheMainUserInterface.pdf'
+		},{
+			name:'Toolbar controls',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/ToolbarControls.pdf'
+		},{
+			name:'Using arguments in workflow',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/UsingArgumentsinWorkflows.pdf'
+		},{
+			name:'Working with conditional statements',
+			url: 'http://www.smoothflow.io/wp-content/uploads/2016/11/WorkingwithConditionalStatements.pdf'
+		}];
+		$scope.setUrlForTutePDF = function (tute) {
+			$scope.pdfLoading = true;
+			$scope.selectedTute = tute.name;
+			$timeout(function () {
+				$scope.activeTutePDFUrl = tute.url;
+				$scope.false = false;
+			});
+		};
+        // Kasun_Wijeratne_6_21_2017 - END
         //============================================
     }])
     .controller('activityController', ['$scope', '$http', '$location', '$rootScope', '$routeParams', function ($scope, $http, $location, $rootScope, $routeParams) {
