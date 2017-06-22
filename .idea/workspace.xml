@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69e68636-8c4a-40f3-b9d6-c90c3fb08362" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/howitworks.html" afterPath="$PROJECT_DIR$/pages/howitworks.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -36,8 +33,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="7511" column="14" lean-forward="false" selection-start-line="7511" selection-start-column="14" selection-end-line="7511" selection-end-column="14" />
+            <state relative-caret-position="295">
+              <caret line="7498" column="15" lean-forward="true" selection-start-line="7498" selection-start-column="15" selection-end-line="7498" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -276,12 +273,12 @@
       <updated>1497857207738</updated>
       <workItem from="1497857211097" duration="11420000" />
       <workItem from="1498036721621" duration="571000" />
-      <workItem from="1498045144229" duration="4865000" />
+      <workItem from="1498045144229" duration="4993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16856000" />
+    <option name="totallyTimeSpent" value="16984000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -422,8 +419,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="7511" column="14" lean-forward="false" selection-start-line="7511" selection-start-column="14" selection-end-line="7511" selection-end-column="14" />
+        <state relative-caret-position="295">
+          <caret line="7498" column="15" lean-forward="true" selection-start-line="7498" selection-start-column="15" selection-end-line="7498" selection-end-column="15" />
           <folding />
         </state>
       </provider>
