@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="69e68636-8c4a-40f3-b9d6-c90c3fb08362" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/howitworks.html" afterPath="$PROJECT_DIR$/pages/howitworks.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,7 +30,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="477">
@@ -41,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="howitworks.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="howitworks.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/howitworks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="118" column="141" lean-forward="false" selection-start-line="118" selection-start-column="141" selection-end-line="118" selection-end-column="141" />
+            <state relative-caret-position="167">
+              <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
@@ -98,8 +97,8 @@
       <list>
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/pages/howitworks.html" />
         <option value="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" />
+        <option value="$PROJECT_DIR$/pages/howitworks.html" />
       </list>
     </option>
   </component>
@@ -275,12 +274,12 @@
       <updated>1497857207738</updated>
       <workItem from="1497857211097" duration="11420000" />
       <workItem from="1498036721621" duration="571000" />
-      <workItem from="1498045144229" duration="6223000" />
+      <workItem from="1498045144229" duration="6403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18214000" />
+    <option name="totallyTimeSpent" value="18394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -389,14 +388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-545">
-          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -407,24 +398,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="7605" column="35" lean-forward="false" selection-start-line="7605" selection-start-column="35" selection-end-line="7605" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-545">
+          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/howitworks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="118" column="141" lean-forward="false" selection-start-line="118" selection-start-column="141" selection-end-line="118" selection-end-column="141" />
+        <state relative-caret-position="167">
+          <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="7605" column="35" lean-forward="false" selection-start-line="7605" selection-start-column="35" selection-end-line="7605" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
