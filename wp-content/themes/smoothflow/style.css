@@ -7490,13 +7490,8 @@ div.wpcf7-mail-sent-ok {
     color: #bbb;
 }
 .highlight-blue .PDF{
-    width: 580px;
-    height: 700px;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 10%;
+    position: relative;
+    z-index: 1;
 }
 .highlight-blue .PDF object{
     width: 100%;

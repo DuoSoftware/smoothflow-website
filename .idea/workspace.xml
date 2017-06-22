@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69e68636-8c4a-40f3-b9d6-c90c3fb08362" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/howitworks.html" afterPath="$PROJECT_DIR$/pages/howitworks.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,25 +31,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="7498" column="15" lean-forward="true" selection-start-line="7498" selection-start-column="15" selection-end-line="7498" selection-end-column="15" />
+            <state relative-caret-position="494">
+              <caret line="7511" column="14" lean-forward="false" selection-start-line="7511" selection-start-column="14" selection-end-line="7511" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="howitworks.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="howitworks.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/howitworks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="117" column="48" lean-forward="false" selection-start-line="117" selection-start-column="48" selection-end-line="117" selection-end-column="48" />
+            <state relative-caret-position="116">
+              <caret line="121" column="54" lean-forward="true" selection-start-line="121" selection-start-column="54" selection-end-line="121" selection-end-column="54" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,8 +98,8 @@
       <list>
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/pages/howitworks.html" />
         <option value="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" />
+        <option value="$PROJECT_DIR$/pages/howitworks.html" />
       </list>
     </option>
   </component>
@@ -273,12 +275,12 @@
       <updated>1497857207738</updated>
       <workItem from="1497857211097" duration="11420000" />
       <workItem from="1498036721621" duration="571000" />
-      <workItem from="1498045144229" duration="4993000" />
+      <workItem from="1498045144229" duration="5856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16984000" />
+    <option name="totallyTimeSpent" value="17847000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -405,23 +407,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="7511" column="14" lean-forward="false" selection-start-line="7511" selection-start-column="14" selection-end-line="7511" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/howitworks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="117" column="48" lean-forward="false" selection-start-line="117" selection-start-column="48" selection-end-line="117" selection-end-column="48" />
+        <state relative-caret-position="116">
+          <caret line="121" column="54" lean-forward="true" selection-start-line="121" selection-start-column="54" selection-end-line="121" selection-end-column="54" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="7498" column="15" lean-forward="true" selection-start-line="7498" selection-start-column="15" selection-end-line="7498" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
