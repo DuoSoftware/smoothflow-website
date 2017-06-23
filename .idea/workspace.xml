@@ -4,7 +4,6 @@
     <list default="true" id="69e68636-8c4a-40f3-b9d6-c90c3fb08362" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/client.html" afterPath="$PROJECT_DIR$/pages/client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
@@ -56,13 +55,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="client.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="84" lean-forward="false" selection-start-line="7" selection-start-column="84" selection-end-line="7" selection-end-column="84" />
+            <state relative-caret-position="425">
+              <caret line="25" column="72" lean-forward="false" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
@@ -83,10 +83,10 @@
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <marker date="1498207790623" expanded="false" signature="9727:9817" ph="..." />
-                <marker date="1498207790623" expanded="false" signature="13914:14004" ph="..." />
-                <marker date="1498207790623" expanded="false" signature="18082:18172" ph="..." />
-                <marker date="1498207790623" expanded="false" signature="22263:22353" ph="..." />
+                <marker date="1498208173088" expanded="false" signature="9738:9828" ph="..." />
+                <marker date="1498208173088" expanded="false" signature="13925:14015" ph="..." />
+                <marker date="1498208173088" expanded="false" signature="18093:18183" ph="..." />
+                <marker date="1498208173088" expanded="false" signature="22274:22364" ph="..." />
               </folding>
             </state>
           </provider>
@@ -146,8 +146,8 @@
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/pages/howitworks.html" />
-        <option value="$PROJECT_DIR$/pages/client.html" />
         <option value="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" />
+        <option value="$PROJECT_DIR$/pages/client.html" />
       </list>
     </option>
   </component>
@@ -311,12 +311,12 @@
       <workItem from="1498036721621" duration="571000" />
       <workItem from="1498045144229" duration="21661000" />
       <workItem from="1498196800500" duration="260000" />
-      <workItem from="1498201987995" duration="1348000" />
+      <workItem from="1498201987995" duration="1673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35260000" />
+    <option name="totallyTimeSpent" value="35585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -385,6 +385,7 @@
           <caret line="23" column="84" lean-forward="false" selection-start-line="23" selection-start-column="84" selection-end-line="23" selection-end-column="84" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
@@ -405,10 +406,10 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <marker date="1498207790623" expanded="false" signature="9727:9817" ph="..." />
-            <marker date="1498207790623" expanded="false" signature="13914:14004" ph="..." />
-            <marker date="1498207790623" expanded="false" signature="18082:18172" ph="..." />
-            <marker date="1498207790623" expanded="false" signature="22263:22353" ph="..." />
+            <marker date="1498208173088" expanded="false" signature="9738:9828" ph="..." />
+            <marker date="1498208173088" expanded="false" signature="13925:14015" ph="..." />
+            <marker date="1498208173088" expanded="false" signature="18093:18183" ph="..." />
+            <marker date="1498208173088" expanded="false" signature="22274:22364" ph="..." />
           </folding>
         </state>
       </provider>
@@ -457,6 +458,7 @@
           <caret line="23" column="84" lean-forward="false" selection-start-line="23" selection-start-column="84" selection-end-line="23" selection-end-column="84" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
@@ -477,10 +479,10 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <marker date="1498207790623" expanded="false" signature="9727:9817" ph="..." />
-            <marker date="1498207790623" expanded="false" signature="13914:14004" ph="..." />
-            <marker date="1498207790623" expanded="false" signature="18082:18172" ph="..." />
-            <marker date="1498207790623" expanded="false" signature="22263:22353" ph="..." />
+            <marker date="1498208173088" expanded="false" signature="9738:9828" ph="..." />
+            <marker date="1498208173088" expanded="false" signature="13925:14015" ph="..." />
+            <marker date="1498208173088" expanded="false" signature="18093:18183" ph="..." />
+            <marker date="1498208173088" expanded="false" signature="22274:22364" ph="..." />
           </folding>
         </state>
       </provider>
@@ -582,6 +584,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="133" column="17" lean-forward="true" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="7959" column="22" lean-forward="false" selection-start-line="7959" selection-start-column="22" selection-end-line="7959" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/howitworks.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
@@ -594,20 +612,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="133" column="17" lean-forward="true" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="84" lean-forward="false" selection-start-line="7" selection-start-column="84" selection-end-line="7" selection-end-column="84" />
+        <state relative-caret-position="425">
+          <caret line="25" column="72" lean-forward="false" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
@@ -628,19 +639,11 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <marker date="1498207790623" expanded="false" signature="9727:9817" ph="..." />
-            <marker date="1498207790623" expanded="false" signature="13914:14004" ph="..." />
-            <marker date="1498207790623" expanded="false" signature="18082:18172" ph="..." />
-            <marker date="1498207790623" expanded="false" signature="22263:22353" ph="..." />
+            <marker date="1498208173088" expanded="false" signature="9738:9828" ph="..." />
+            <marker date="1498208173088" expanded="false" signature="13925:14015" ph="..." />
+            <marker date="1498208173088" expanded="false" signature="18093:18183" ph="..." />
+            <marker date="1498208173088" expanded="false" signature="22274:22364" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="7959" column="22" lean-forward="false" selection-start-line="7959" selection-start-column="22" selection-end-line="7959" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
