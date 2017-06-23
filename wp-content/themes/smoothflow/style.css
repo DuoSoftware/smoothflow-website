@@ -7957,11 +7957,15 @@ margin-top: 234px;
     margin: auto;
     right: 0px;
     box-sizing: border-box;
-    border: 17px solid black;
-    border-color: transparent transparent #ffffff #ffffff;
+    border: 17px solid;
+    /*border-color: transparent transparent #ffffff #ffffff;*/
+    /*!* transform-origin: 0 0; *!*/
+    /*transform: rotate(-135deg);*/
+    /*box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, 0.1);*/
+    border-color: transparent transparent transparent transparent;
     /* transform-origin: 0 0; */
     transform: rotate(-135deg);
-    box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 2px 4px 0 rgba(255, 255, 255, 0.2);
     /*border-color: transparent transparent #34495e #34495e;*/
     /*!* transform-origin: 0 0; *!*/
     /*transform: rotate(-135deg);*/
