@@ -19,10 +19,14 @@
                                         <!-- category list goes here -->
                                         <input type="text" placeholder="Search by name" ng-model="SearchKeyword" onchange="">
                                         <hr>
+                                        <ul class="category-list">
+                                            <li ng-click="toggleCategory('all')"><a>All</a></li>
+                                        </ul>
+                                        
                                         <ul class="category-list" ng-repeat="items in ClassToFilter()|filter:filterClass">
 
 
-                                            <!--<li class="active-activity" ng-click="toggleCategory('all')"><a>All</a></li>-->
+                                            
                                             <li ng-click="toggleCategory(items) "><a>{{items.class}}</a></li>
                                             <!--<li><a>Database</a></li>
                                             <li><a>Dataflow</a></li>
@@ -46,7 +50,7 @@
                                     <div class="vc_column-inner" ng-click="getAtivityDetails(activity.Category,activity.icon);">
                                         <!-- content goes here -->
 
-                                        <img src="wp-content/themes/smoothflow/images/{{activity.icon}}" style="margin-left:12px;margin-bottom:15px;">
+                                        <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-left:12px;margin-bottom:15px;">
                                         <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>                                        .
 
                                     </div>
