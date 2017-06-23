@@ -322,6 +322,10 @@ select {
 	max-width: none!important
 }
 
+/*Typography*/
+.font-blue-dark{
+    color: #34495e;
+}
 button {
 	overflow: visible;
 	-webkit-appearance: none;
@@ -7526,8 +7530,9 @@ div.wpcf7-mail-sent-ok {
 }
 
 .wpb_wrapper .definition{
-    color: #aaa;
+    color: #888;
     font-size: 20px;
+    line-height: 25px;
 }
 
 .video_column .wpb_text_column{
@@ -7723,6 +7728,12 @@ div.wpcf7-mail-sent-ok {
 	border-bottom: 3px solid #474f6f
 }
 
+/*Headers*/
+.heading-spacious{
+    /*text-align: center;*/
+    font-size: 30px;
+    /*margin: 50px 24%;*/
+}
 .header,
 .plan li {
 	border-bottom: 1px solid #cecccc
@@ -7925,6 +7936,70 @@ margin-top: 234px;
   }
 }
 
+/*Client page*/
+.step-box{
+    color: #26bda0;
+    position: relative;
+    padding: 43px 30px;
+    height: 115px;
+    text-align: center;
+    display: -webkit-box;
+    vertical-align: middle;
+}
+.step-arrow{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    /* margin-left: -0.5em; */
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    right: 10px;
+    box-sizing: border-box;
+    border: 17px solid black;
+    border-color: transparent transparent #ffffff #ffffff;
+    /* transform-origin: 0 0; */
+    transform: rotate(-135deg);
+    box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+    /*border-color: transparent transparent #34495e #34495e;*/
+    /*!* transform-origin: 0 0; *!*/
+    /*transform: rotate(-135deg);*/
+    /*box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, 0.2);*/
+}
+.client-download{
+    display: inline-block;
+}
+.client-download .download-btn{
+    display: inline-block;
+    padding: 10px 19px;
+    background: #34495e;
+    color: #fff;
+    border-radius: 6px;
+    border: solid 2px #34495e;
+    /*border: solid 1px #e85b30;*/
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
+}
+.client-download .download-btn:hover{
+    background: transparent;
+    border:solid 2px #34495e;
+    color: #34495e;
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
+}
+.client-download .download-btn>span{
+    color: #26bda0;
+}
+.client-download .download-btn:hover>span{
+    color: #34495e;
+}
 /* activity page styles starts here */
 
 .activity {
