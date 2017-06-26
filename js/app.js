@@ -155,7 +155,7 @@ angular.module('smoothflowwebsite', [
         // Kasun_Wijeratne_6_21_2017 - END
         //============================================
     }])
-    .controller('activityController', ['$scope', '$http', '$location', '$rootScope', '$routeParams', function ($scope, $http, $location, $rootScope, $routeParams) {
+    .controller('activityController', ['$scope', '$http', '$location', '$rootScope', '$routeParams','$filter', function ($scope, $http, $location, $rootScope, $routeParams,$filter) {
         //console.log("activity controller hits");
 
         $scope.SearchKeyword = "";
@@ -368,10 +368,13 @@ angular.module('smoothflowwebsite', [
             // alert(category);
             $scope.selectCategory = category;
             $scope.selectcatImage = catImage;
+            var tempList = $filter('filter')($scope.categorieslist, {Category: category})[0];
+			$rootScope.ActivityDetailsObj = tempList;
+			$scope.selectedComp = tempList.DisplayName;
         };
 
         $scope.changeLocationdetails = function (details) {
-        	$scope.selectedComp = details;
+        	$scope.selectedComp = details.DisplayName;
 
             $rootScope.ActivityDetailsObj = details;
             // console.log($rootScope.ActivityDetailsObj);

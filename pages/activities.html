@@ -46,9 +46,9 @@
                 <div class="row" style="margin-left: 0;background: #eee;display: table-row;">
                     <div class="vc_col-sm-4" style="padding-right: 0;display: table-cell;min-width: 250px;min-height: 346px;" >
                         <div style="background: #eee;padding-top: 10px">
-                            <div ng-repeat="activity in categorieslist |filter:selectCategory" class="activitylist" ng-class="{'comp-active':selectedComp == activity}" ng-click="changeLocationdetails(activity)">
+                            <div ng-repeat="activity in categorieslist |filter:selectCategory" class="activitylist" ng-class="{'comp-active':selectedComp == activity.DisplayName}" ng-click="changeLocationdetails(activity)">
                                 <a class="activitya"><span class="activitya">{{activity.DisplayName}}</span></a>
-                                <div class="category-arrow" ng-if="selectedComp == activity"></div>
+                                <div class="category-arrow" ng-if="selectedComp == activity.DisplayName"></div>
                             </div>
                         </div>
                     </div>
