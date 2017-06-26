@@ -1,73 +1,47 @@
 <div id="wrapper">
 
-    <div class="innertitle" data-sr="enter bottom and move 50px over 0.5s">
+    <div class="innertitle" data-sr="enter bottom and move 50px over 0.5s" style="margin-bottom: 0">
         <div class="row">
             <h1>Activities</h1>
         </div>
     </div>
-    <div class="innercontent">
-        <div class="vc_row wpb_row vc_row-fluid">
-            <div class="wpb_column vc_column_container vc_col-sm-4">
-                <div class="vc_column-inner">
-                    <div class="wpb_wrapper">
-                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                            <div class="wpb_column vc_column_container vc_col-sm-5">
-                            </div>
-                            <div class="wpb_column vc_column_container vc_col-sm-7">
-                                <div class="vc_column-inner">
-                                    <div class="wpb_wrapper activity-categories-wrapper">
-                                        <!-- category list goes here -->
-                                        <input type="text" placeholder="Search by name" ng-model="SearchKeyword" onchange="">
-                                        <hr>
-                                        <ul class="category-list">
-                                            <li ng-click="toggleCategory('all')"><a>All</a></li>
-                                        </ul>
-                                        
-                                        <ul class="category-list" ng-repeat="items in ClassToFilter()|filter:filterClass">
-
-
-                                            
-                                            <li ng-click="toggleCategory(items) "><a>{{items.class}}</a></li>
-                                            <!--<li><a>Database</a></li>
-                                            <li><a>Dataflow</a></li>
-                                            <li><a>About</a></li>-->
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- category list goes here -->
+    <div class="row" style="margin: 0;max-width: 100%;">
+        <div class="vc_col-sm-4" style="padding: 20px 0 20px 10%">
+            <div style="margin-bottom: 20px;color: #aaa;">Filters</div>
+            <ul class="category-list">
+                <li ng-click="toggleCategory('all')"><a>All</a></li>
+                <!--<li class="active-activity" ng-click="toggleCategory('all')"><a>All</a></li>-->
+                <li ng-repeat="items in ClassToFilter()|filter:filterClass" ng-click="toggleCategory(items)" ng-class="{'active':selectedActivityCat == items}">
+                    <a>{{items.class}}</a>
+                    <div class="category-arrow" ng-if="selectedActivityCat == items"></div>
+                </li>
+                <!--<li><a>Database</a></li>
+                <li><a>Dataflow</a></li>
+                <li><a>About</a></li>-->
+            </ul>
+        </div>
+        <div class="vc_col-sm-8" style="box-shadow: inset 0px 0px 6px #aaa;min-height: 450px;padding: 0;">
+            <div class="search-box">
+                <input type="text" placeholder="Search by name" ng-model="SearchKeyword" onchange="">
             </div>
             <!-- Start wpb_column vc_column_container vc_col-sm-8-->
-            <div ng-hide="actlist">
-                <div class="wpb_column vc_column_container vc_col-sm-8">
-                    <div class="vc_column-inner">
-                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                            <div class="wpb_column vc_column_container vc_col-sm-10">
-                                <!-- activities goes here -->
-                                <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat">
-                                    <div class="vc_column-inner" ng-click="getAtivityDetails(activity.Category,activity.icon);">
-                                        <!-- content goes here -->
+            <div ng-hide="actlist" style="padding:20px 10% 20px 20px">
+                <!-- activities goes here -->
+                <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat">
+                    <div class="vc_column-inner" ng-click="getAtivityDetails(activity.Category,activity.icon);">
+                        <!-- content goes here -->
 
-                                        <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-left:12px;margin-bottom:15px;">
-                                        <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>                                        .
-
-                                    </div>
-                                </div>
-                                <!-- activities ends here -->
-                            </div>
-                            <div class="wpb_column vc_column_container vc_col-sm-2">
-                            </div>
-                        </div>
+                        <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-left:12px;margin-bottom:15px;">
+                        <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>
                     </div>
                 </div>
-
+                <!-- activities ends here -->
             </div>
             <!-- end wpb_column vc_column_container vc_col-sm-8 -->
             <!-- Start activity details-->
-            <div ng-show="actlist">
-                <div class="wpb_column vc_column_container vc_col-sm-8">
+            <div ng-show="actlist" style="padding:20px">
+                <div>
                     <img src="wp-content/themes/smoothflow/images/{{selectcatImage}}" style="margin-left:12px;margin-bottom:15px;">
                     <span style="color: black;font-size: 17px;padding-left: 10px;">{{selectCategory}}</span>
                     <hr/>
