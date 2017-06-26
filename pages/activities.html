@@ -43,16 +43,16 @@
                 <img src="wp-content/themes/smoothflow/images/{{selectcatImage}}" style="width: 45px;box-shadow: 0px 3px 3px rgba(52, 73, 94, 0.5);border: solid 2px #fff;border-radius: 50%;">
                 <span style="color: #34495e;font-size: 16px;padding-left: 10px;font-weight: bold;">{{selectCategory}}</span>
                 <hr style="margin-bottom: 0;border-color: #dddddd">
-                <div class="row" style="margin-left: 0;background: #fafafa;">
-                    <div class="vc_col-sm-4" style="padding-right: 0" id="comp-container" >
-                        <div style="background: #fafafa;padding-top: 10px">
+                <div class="row" style="margin-left: 0;background: #eee;display: table-row;">
+                    <div class="vc_col-sm-4" style="padding-right: 0;display: table-cell;min-width: 250px;min-height: 346px;" >
+                        <div style="background: #eee;padding-top: 10px">
                             <div ng-repeat="activity in categorieslist |filter:selectCategory" class="activitylist" ng-class="{'comp-active':selectedComp == activity}" ng-click="changeLocationdetails(activity)">
                                 <a class="activitya"><span class="activitya">{{activity.DisplayName}}</span></a>
                                 <div class="category-arrow" ng-if="selectedComp == activity"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="vc_col-sm-8" style="min-height: 314px;border-left: solid 1px #eee;padding-top: 20px;background: #ffffff;">
+                    <div class="vc_col-sm-8" style="border-left: solid 1px #eee;padding-top: 20px;background: #ffffff;display: table-cell;float: none;min-height: 346px" id="details-container">
                         <div class="wpb_column vc_column_container">
                             <!--<h5 style="text-align: left;color: #3cc2a8;">{{detailsName}}</h5>-->
                             <!--<md-icon md-svg-icon="{{ActivityDetailsObj.Icon}}"></md-icon><span style="text-align: left;color: #000;">{{ActivityDetailsObj.Description}}</span>-->

@@ -8175,7 +8175,7 @@ ul#horizontal-list li {
     /* padding-bottom: 10px; */
     /*border-bottom-style: solid;*/
     /* padding-top: 10px; */
-    padding: 5px 10px 5px 0;
+    padding: 5px 10px 5px 10px;
     /*display: inline-block;*/
     position: relative;
     outline: none!important;
@@ -8184,14 +8184,14 @@ ul#horizontal-list li {
     margin: 8px 0;
 }
 .activitylist:hover{
-    background: #f5f5f5;
+    background: #ddd;
     cursor: pointer;
 }
 .activitylist:hover .category-arrow{
     border-color: #fff!important;
 }
 .activitylist.comp-active{
-    background: #f1f1f1;
+    background: #ddd;
 }
 .activitylist a.activitya{
     color: rgba(52, 73, 94, 0.7);
