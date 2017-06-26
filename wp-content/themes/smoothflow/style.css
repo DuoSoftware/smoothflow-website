@@ -8016,6 +8016,9 @@ div.wpcf7-mail-sent-ok {
 .search-box>input{
     border-radius: 3px;margin: 0;
 }
+.search-box>input:focus{
+    border:none!important;
+}
 .activity {
     margin-right: 15px;
     margin-bottom: 15px;
