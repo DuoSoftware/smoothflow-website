@@ -374,10 +374,11 @@ angular.module('smoothflowwebsite', [
         };
 
         $scope.changeLocationdetails = function (details) {
+        	$scope.selectedComp = details;
 
             $rootScope.ActivityDetailsObj = details;
             // console.log($rootScope.ActivityDetailsObj);
-            $location.path("/details/" + $rootScope.ActivityDetailsObj.DisplayName);
+            // $location.path("/details/" + $rootScope.ActivityDetailsObj.DisplayName);
         };
         //=========================================
 
