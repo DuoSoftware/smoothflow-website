@@ -233,7 +233,7 @@ angular.module('smoothflowwebsite', [
                 }
             }, this)
         };
-        //use for set icons and remove duplicates ----- 02-05-2017 add by lakmini
+        //use for set icons and remove duplicates ----- 02-05-2017 add by lakmini comment
         // $scope.SetCatIcon = function (activities, _type) {
         //     $scope.indexedCat = [];
         //     $scope.activitiescat = [];
