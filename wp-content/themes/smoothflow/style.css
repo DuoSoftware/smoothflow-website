@@ -8197,9 +8197,10 @@ ul#horizontal-list li {
     background: #ddd;
 }
 .activitylist a.activitya{
-    color: rgba(52, 73, 94, 0.7);
-    font-weight: bold;
-    font-size: 15px;
+    /*color: rgba(52, 73, 94, 0.7);*/
+    color: #000;
+    /*font-weight: bold;*/
+    font-size: 14px;
 }
 .activitylist .category-arrow{
     z-index: 1;
@@ -8228,6 +8229,7 @@ a.activitya:hover, a.activitya:active {
     border-bottom: solid 1px #dddddd;
     margin-bottom: 10px;
     font-weight:bold;
+    color: #34495e;
 }
 .empty-msg{
     text-align: center;
