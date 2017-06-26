@@ -21,7 +21,7 @@
                 <li><a>About</a></li>-->
             </ul>
         </div>
-        <div class="vc_col-sm-8" style="box-shadow: inset 0px 0px 6px #aaa;min-height: 450px;padding: 0;">
+        <div class="vc_col-sm-8" style="box-shadow: inset 0px 0px 6px #aaa;min-height: 460px;padding: 0;">
             <div class="search-box">
                 <input type="text" placeholder="Search by name" ng-model="SearchKeyword" onchange="">
             </div>
@@ -29,10 +29,10 @@
             <div ng-hide="actlist" style="padding:20px 10% 20px 20px">
                 <!-- activities goes here -->
                 <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat">
-                    <div class="vc_column-inner" ng-click="getAtivityDetails(activity.Category,activity.icon);">
+                    <div class="vc_column-inner" ng-click="getAtivityDetails(activity.Category,activity.icon);" style="text-align: center">
                         <!-- content goes here -->
 
-                        <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-left:12px;margin-bottom:15px;">
+                        <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-bottom:15px;">
                         <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>
                     </div>
                 </div>

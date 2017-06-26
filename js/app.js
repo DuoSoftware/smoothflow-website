@@ -181,6 +181,7 @@ angular.module('smoothflowwebsite', [
         });
 
         $scope.toggleCategory = function (category) {
+        	$scope.selectedActivityCat = category;
 
             if (category == "all") {
                 $scope.actlist = false; 
