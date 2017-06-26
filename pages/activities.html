@@ -21,7 +21,7 @@
                 <li><a>About</a></li>-->
             </ul>
         </div>
-        <div class="vc_col-sm-9" style="box-shadow: inset 0px 0px 6px #aaa;min-height: 460px;padding: 0;">
+        <div class="vc_col-sm-9" id="activity-container" style="box-shadow: inset 0px 0px 6px #aaa;min-height: 460px;padding: 0;">
             <div class="search-box">
                 <input type="text" placeholder="Search by name" ng-model="SearchKeyword" onchange="">
             </div>
@@ -43,16 +43,16 @@
                 <img src="wp-content/themes/smoothflow/images/{{selectcatImage}}" style="width: 45px;box-shadow: 0px 3px 3px rgba(52, 73, 94, 0.5);border: solid 2px #fff;border-radius: 50%;">
                 <span style="color: #34495e;font-size: 16px;padding-left: 10px;font-weight: bold;">{{selectCategory}}</span>
                 <hr style="margin-bottom: 0;border-color: #dddddd">
-                <div class="row" style="padding-right: 15px">
-                    <div class="vc_col-sm-4" style="padding-right: 0">
-                        <div style="margin-bottom: 35px;background: #fafafa;padding-top: 10px">
+                <div class="row" style="margin-left: 0;background: #fafafa;">
+                    <div class="vc_col-sm-4" style="padding-right: 0" id="comp-container" >
+                        <div style="background: #fafafa;padding-top: 10px">
                             <div ng-repeat="activity in categorieslist |filter:selectCategory" class="activitylist" ng-class="{'comp-active':selectedComp == activity}" ng-click="changeLocationdetails(activity)">
                                 <a class="activitya"><span class="activitya">{{activity.DisplayName}}</span></a>
                                 <div class="category-arrow" ng-if="selectedComp == activity"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="vc_col-sm-8" style="min-height: 314px;border-left: solid 1px #eee;padding-top: 20px">
+                    <div class="vc_col-sm-8" style="min-height: 314px;border-left: solid 1px #eee;padding-top: 20px;background: #ffffff;">
                         <div class="wpb_column vc_column_container">
                             <!--<h5 style="text-align: left;color: #3cc2a8;">{{detailsName}}</h5>-->
                             <!--<md-icon md-svg-icon="{{ActivityDetailsObj.Icon}}"></md-icon><span style="text-align: left;color: #000;">{{ActivityDetailsObj.Description}}</span>-->
@@ -63,6 +63,9 @@
                             <div class="title-row row">
                                 <div class="vc_col-sm-6">
                                     <div class="title-heading">In arguments</div>
+                                    <div class="empty-msg" ng-if="ActivityDetailsObj.Variables.length == 0">
+                                        <span>Empty</span>
+                                    </div>
                                     <div ng-repeat="Variables in ActivityDetailsObj.Variables | filter : 'InArgument'" class="activityvariable">
                                         <i class="fa fa-check-circle" ng-style="{color: {true:'red',false:'green'}[Variables.Priority == 'Mandatory']}"></i>
                                         <span ng-style="{color: {true:'#a2a0a0',false:'#a2a0a0'}[Variables.Priority == 'Mandatory']}" ;>{{Variables.Key}}</span>
@@ -72,6 +75,9 @@
                                 </div>
                                 <div class="vc_col-sm-6">
                                     <div class="title-heading">Out arguments</div>
+                                    <div class="empty-msg" ng-if="ActivityDetailsObj.Variables.length==0 || ActivityDetailsObj.Variables == undefined">
+                                        <i>Empty</i>
+                                    </div>
                                     <div ng-repeat="Variables in ActivityDetailsObj.Variables | filter : 'OutArgument'" class="activityvariable">
 
                                         <i class="fa fa-check-circle" ng-style="{color: {true:'red',false:'green'}[Variables.Priority == 'Mandatory']}"></i>

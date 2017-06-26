@@ -160,6 +160,16 @@ angular.module('smoothflowwebsite', [
 
         $scope.SearchKeyword = "";
 
+		// $scope.$watch(function () {
+		// 	var activityElem = document.getElementById('activity-container');
+		// 	var compElem = angular.element('#comp-container');
+		// 	if(activityElem != undefined){
+		// 		if(compElem != undefined){
+		// 			compElem.css({'min-height':activityElem.clientHeight - 69});
+		// 		}
+		// 	}
+		// });
+
 
         //load activity details
         $scope.detailsName = $routeParams.DisplayName;
@@ -365,12 +375,10 @@ angular.module('smoothflowwebsite', [
         //============================================
         // add by lakmini 22-05-2017  
         $scope.getAtivityDetails = function (category, catImage) {
-
             $scope.actlist = true;
             // alert(category);
             $scope.selectCategory = category;
             $scope.selectcatImage = catImage;
-
         };
 
         $scope.changeLocationdetails = function (details) {

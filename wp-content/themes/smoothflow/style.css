@@ -8146,7 +8146,7 @@ ul.breadcrumb li a:hover {
     /*border-bottom-width: 1px;*/
     /* padding-bottom: 10px; */
     /*border-bottom-style: solid;*/
-    padding-top: 10px;
+    padding-top: 15px;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -8154,7 +8154,7 @@ ul.breadcrumb li a:hover {
 .activityvariable .string{
     background: #1abc9c;
 }
-.activityvariable .integer{
+.activityvariable .int{
     background: #daa427;
 }
 
@@ -8175,7 +8175,7 @@ ul#horizontal-list li {
     /* padding-bottom: 10px; */
     /*border-bottom-style: solid;*/
     /* padding-top: 10px; */
-    padding: 5px 10px;
+    padding: 5px 10px 5px 0;
     /*display: inline-block;*/
     position: relative;
     outline: none!important;
@@ -8225,6 +8225,11 @@ a.activitya:hover, a.activitya:active {
     border-bottom: solid 1px #dddddd;
     margin-bottom: 10px;
     font-weight:bold;
+}
+.empty-msg{
+    text-align: center;
+    margin: 30px 0;
+    color: #aaa;
 }
 
 /*span.activitya:hover{*/
