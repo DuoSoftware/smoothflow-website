@@ -10,10 +10,10 @@
         <div class="vc_col-sm-3" style="padding: 20px 0 20px 10%">
             <div style="margin-bottom: 20px;color: #aaa;">Filters</div>
             <ul class="category-list">
-                <li ng-click="toggleCategory('all')"><a>All</a></li>
+                <li ng-click="toggleCategory('all')" style="padding-left: 45px"><a>All</a></li>
                 <!--<li class="active-activity" ng-click="toggleCategory('all')"><a>All</a></li>-->
                 <li ng-repeat="items in ClassToFilter()|filter:filterClass" ng-click="toggleCategory(items)" ng-class="{'active':selectedActivityCat == items}">
-                    <a>{{items.class}}</a>
+                    <img src="wp-content/themes/smoothflow/images/{{items.class|lowercase}}.png" alt="" style="opacity: 0.5;width: 18px;margin-right: 10px;"><a>{{items.class}}</a>
                     <div class="category-arrow" ng-if="selectedActivityCat == items"></div>
                 </li>
                 <!--<li><a>Database</a></li>
