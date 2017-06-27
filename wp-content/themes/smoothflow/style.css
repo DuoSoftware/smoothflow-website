@@ -8140,8 +8140,44 @@ div.wpcf7-mail-sent-ok {
     /*-webkit-box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;*/
     /*-moz-box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;*/
     /*box-shadow: inset 0px 0px 6px #aaa,inset 0px 0px 6px #aaa;*/
-    margin-bottom: 10px;padding: 15px;
+    margin: 15px;
+    position: relative;
     /*background: #f1f1f1;*/
+}
+.search-box .search-results-drop{
+    max-height: 300px;
+    overflow-y: scroll;
+    border: solid 1px #ddd;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    background: #fff;
+    z-index: 5;
+    left: 0;
+    /*margin: 0 15px;*/
+    width:100%;
+}
+.search-box .search-results-drop ul{
+    display: block;
+    overflow: hidden;
+    margin:0;
+}
+.search-box .search-results-drop ul li{
+    display: inline-block;
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.search-box .search-results-drop ul li:hover{
+    background: #eeeeee;
+}
+.search-box .search-results-drop ul li img{
+    display: inline-block;
+    width: 20px;
+    margin-right: 10px;
+}
+.search-box .search-results-drop ul li span{
+    display: inline-block;
+    color: #000;
 }
 .search-box>input{
     border-radius: 3px;margin: 0;
@@ -8365,6 +8401,19 @@ a.activitya:hover, a.activitya:active {
     text-align: center;
     margin: 30px 0;
     color: #aaa;
+}
+.custom-scroll::-webkit-scrollbar {
+    width: 10px;
+    background-color: #fff;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    display: none;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
 }
 
 /*span.activitya:hover{*/

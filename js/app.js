@@ -338,9 +338,9 @@ angular.module('smoothflowwebsite', [
         // console.log($scope.detailsName);
         $scope.$watch('SearchKeyword', function (keyword) {
             var _activities;
-            $scope.actlist = false;
+            // if($scope.actlist)$scope.actlist = false;
             $scope.activitiescat = [];
-            if (!keyword.length) _activities = $scope._categories;
+            if (!keyword.length) _activities = $scope._categorieslist;
             else {
                 keyword = keyword.toLowerCase();
                 _activities = SearchActivitiesByName(keyword);
@@ -351,9 +351,17 @@ angular.module('smoothflowwebsite', [
 
         });
 
+        // Kasun_Wijeratne
+		$scope.dropResults = false;
+		$scope.setDropResults = function () {
+			$scope.dropResults = true;
+		}
+        // Kasun_Wijeratne
+
         $scope.toggleCategory = function (category) {
             $scope.selectedActivityCat = category;
             $scope.SearchKeyword = "";
+            $scope.dropResults = false;
             if (category == "all") {
                 $scope.actlist = false;
                 $scope.categories();
@@ -368,7 +376,7 @@ angular.module('smoothflowwebsite', [
         }
 
         var SearchActivitiesByName = function (name) {
-            $scope.actlist = false;
+            // $scope.actlist = false;
             return $scope.catList.filter(function (activity) {
                 var activity_name = activity.Category.toLowerCase();
                 return (activity_name.search(name) !== -1);
@@ -539,6 +547,7 @@ angular.module('smoothflowwebsite', [
         // add by lakmini 22-05-2017  
         $scope.getAtivityDetails = function (category, catImage) {
             $scope.actlist = true;
+            $scope.dropResults = false;
             // alert(category);
             $scope.selectCategory = category;
             $scope.selectcatImage = catImage;
