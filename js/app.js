@@ -288,15 +288,15 @@ angular.module('smoothflowwebsite', [
         });
 
         $scope.toggleCategory = function (category) {
-        	$scope.selectedActivityCat = category;
-
+            $scope.selectedActivityCat = category;
+            $scope.SearchKeyword = "";
             if (category == "all") {
-                $scope.actlist = false; 
+                $scope.actlist = false;
                 $scope.categories();
             }
             else {
                 $scope.activities = SearchActivitiesByCategory(category.class);
-                $scope.actlist = false;               
+                $scope.actlist = false;
                 SetDisplayOut($scope.activities);
             }
 
@@ -305,7 +305,7 @@ angular.module('smoothflowwebsite', [
 
         var SearchActivitiesByName = function (name) {
             $scope.actlist = false;
-            return $scope._categories.filter(function (activity) {
+            return $scope.catList.filter(function (activity) {
                 var activity_name = activity.Category.toLowerCase();
                 return (activity_name.search(name) !== -1);
             });
@@ -322,7 +322,7 @@ angular.module('smoothflowwebsite', [
         }
         $scope.getAllCategory = function () {
             $scope.activities = $scope.categorieslist;
-            SetDisplayOut($scope.categorieslist);
+            $scope.catList = SetDisplayOut($scope.categorieslist);
 
 
 
@@ -339,6 +339,8 @@ angular.module('smoothflowwebsite', [
                     $scope.activitiescat.push(element);
                 }
             }, this)
+
+            return $scope.activitiescat;
         };
         //use for set icons and remove duplicates ----- 02-05-2017 add by lakmini comment
         // $scope.SetCatIcon = function (activities, _type) {
