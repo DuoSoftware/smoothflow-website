@@ -60,6 +60,8 @@ angular.module('smoothflowwebsite', [
         //console.log("application stated");
 
 
+		// var footerElem = angular.element('#footerBanner');
+		// if(footerElem)footerElem.css('visibility','invisible');
 
         //28-03-2017 add by lakmini==============
 
@@ -152,6 +154,24 @@ angular.module('smoothflowwebsite', [
                 $scope.false = false;
             });
         };
+		// Animate footer
+		$scope.footerIsOn = false;
+		angular.element(window).scroll(function() {
+			var elem = angular.element('#footerBanner');
+			if(elem != undefined){
+				var hT = elem.offset().top,
+					hH = elem.outerHeight(),
+					wH = $(window).height(),
+					wS = $(this).scrollTop();
+
+				if (wS > (hT+hH-wH)){
+					angular.element('#footerBanner').fadeIn('slow');
+				}else{
+					angular.element('#footerBanner').fadeOut('slow');
+				}
+			}
+		});
+		// Animate footer
         // Kasun_Wijeratne_6_21_2017 - END
         //============================================
     }])
