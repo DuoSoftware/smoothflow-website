@@ -5794,6 +5794,13 @@ header nav li {
     }
 }
 
+.keyfeatures .direction.path1,
+.keyfeatures .direction.path2,
+.keyfeatures .direction.path3{
+    top:227px;
+    /*opacity:0;*/
+}
+
 .keyfeatures .block.one:before,
 .keyfeatures .block.two:before {
     width: 49px;
@@ -6995,6 +7002,11 @@ div.wpcf7-mail-sent-ok {
         position: relative;
         top: -30px
     }
+    .overview img{
+        position: relative;
+        opacity:0;
+        left: 70px;
+    }
     .overview .col .pencil1 {
         background: url(images/pencil1.png) no-repeat;
         position: absolute;
@@ -7328,8 +7340,9 @@ div.wpcf7-mail-sent-ok {
         width: 128px;
         height: 179px;
         position: absolute;
-        top: 267px;
-        z-index: 1
+        top: 237px;
+        z-index: 1;
+        opacity: 0;
     }
     .keyfeatures .direction {
         position: absolute

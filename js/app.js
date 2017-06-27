@@ -158,16 +158,61 @@ angular.module('smoothflowwebsite', [
 		$scope.footerIsOn = false;
 		angular.element(window).scroll(function() {
 			var elem = angular.element('#footerBanner');
+			var elem2 = angular.element('#overview-image');
+			var elem3 = angular.element('.path1');
+			var elem4 = angular.element('.path2');
+			var elem5 = angular.element('.path3');
+			var elem6 = angular.element('.screens');
 			if(elem != undefined){
-				var hT = elem.offset().top,
+				var hT,
 					hH = elem.outerHeight(),
 					wH = $(window).height(),
 					wS = $(this).scrollTop();
 
-				if (wS > (hT+hH-wH)){
-					angular.element('#footerBanner').fadeIn('slow');
+				if (wS > (hH-wH)){
+					elem.fadeIn('slow');
 				}else{
-					angular.element('#footerBanner').fadeOut('slow');
+					elem.fadeOut('slow');
+				}
+			}
+
+			if(elem2 != undefined){
+				var hT2,
+					hH2 = elem2.outerHeight(),
+					wH2 = $(window).height(),
+					wS2 = $(this).scrollTop();
+
+				if (wS2 > (hH2-wH2)){
+					elem2.animate({
+						'left':'0px',
+						'opacity':'1'
+					}, 700);
+				}
+			}
+
+			if(elem3 != undefined && elem4 != undefined && elem5 != undefined){
+				var hT3,
+					hH3 = elem6.outerHeight(),
+					wH3 = $(window).height(),
+					wS3 = $(this).scrollTop();
+
+				if (wS3 > (hH3-wH3)){
+					elem3.animate({
+						'top':'267px',
+						'opacity':'1'
+					}, 400, function () {
+						elem4.animate({
+							'top':'267px',
+							'opacity':'1'
+						}, 400, function () {
+							elem5.animate({
+								'top':'267px',
+								'opacity':'1'
+							}, 400, function () {
+
+							});
+						});
+					});
 				}
 			}
 		});
