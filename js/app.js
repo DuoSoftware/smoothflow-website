@@ -162,7 +162,15 @@ angular.module('smoothflowwebsite', [
 			var elem3 = angular.element('.path1');
 			var elem4 = angular.element('.path2');
 			var elem5 = angular.element('.path3');
-			var elem6 = angular.element('.screens');
+			var elem6 = angular.element('.screens .one');
+			var elem7 = angular.element('.screens .two');
+			var elem8 = angular.element('.screens .three');
+			var elem9 = angular.element('.keyfeatures');
+			var elem10 = angular.element('.title');
+			var elem11 = angular.element('.circle1');
+			var elem12 = angular.element('.circle2');
+			var elem13 = angular.element('.circle3');
+			var elem14 = angular.element('.circle4');
 			if(elem != undefined){
 				var hT,
 					hH = elem.outerHeight(),
@@ -191,25 +199,60 @@ angular.module('smoothflowwebsite', [
 			}
 
 			if(elem3 != undefined && elem4 != undefined && elem5 != undefined){
-				var hT3,
-					hH3 = elem6.outerHeight(),
+				var hT3 = elem9.offset().top,
+					hH3 = elem9.outerHeight(),
 					wH3 = $(window).height(),
 					wS3 = $(this).scrollTop();
 
-				if (wS3 > (hH3-wH3)){
+				if (wS3 > (hT3+hH3-wH3)-400){
 					elem3.animate({
 						'top':'267px',
 						'opacity':'1'
 					}, 400, function () {
+						elem6.fadeIn();
 						elem4.animate({
 							'top':'267px',
 							'opacity':'1'
 						}, 400, function () {
+							elem7.fadeIn();
 							elem5.animate({
 								'top':'267px',
 								'opacity':'1'
 							}, 400, function () {
+								elem8.fadeIn();
+							});
+						});
+					});
+				}
+			}
 
+			if(elem11 != undefined && elem12 != undefined && elem13 != undefined && elem14 != undefined){
+				var hT4 = elem10.offset().top,
+					hH4 = elem10.outerHeight(),
+					wH4 = $(window).height(),
+					wS4 = $(this).scrollTop();
+
+				if (wS4 > (hT4+hH4-wH4)){
+					elem11.animate({
+						'top':'118px',
+						'left':'211px',
+						'opacity':'1'
+					}, 300, function () {
+						elem12.animate({
+							'top':'302px',
+							'left':'395px',
+							'opacity':'1'
+						}, 300, function () {
+							elem13.animate({
+								'top':'298px',
+								'right':'405px',
+								'opacity':'1'
+							}, 300, function () {
+								elem14.animate({
+									'top':'107px',
+									'right':'199px',
+									'opacity':'1'
+								}, 300);
 							});
 						});
 					});

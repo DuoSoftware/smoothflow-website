@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69e68636-8c4a-40f3-b9d6-c90c3fb08362" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/homepage.html" afterPath="$PROJECT_DIR$/pages/homepage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" />
@@ -35,8 +36,8 @@
       <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="54" column="31" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="31" />
+            <state relative-caret-position="200">
+              <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -52,25 +53,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="7344" column="18" lean-forward="false" selection-start-line="7344" selection-start-column="18" selection-end-line="7344" selection-end-column="18" />
+            <state relative-caret-position="397">
+              <caret line="5888" column="16" lean-forward="false" selection-start-line="5888" selection-start-column="16" selection-end-line="5888" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="210" column="32" lean-forward="false" selection-start-line="210" selection-start-column="32" selection-end-line="210" selection-end-column="32" />
+            <state relative-caret-position="285">
+              <caret line="206" column="41" lean-forward="false" selection-start-line="206" selection-start-column="41" selection-end-line="206" selection-end-column="41" />
               <folding>
                 <element signature="e#2439#3197#0" expanded="false" />
                 <element signature="e#3294#3431#0" expanded="false" />
-                <element signature="e#17477#18360#0" expanded="false" />
+                <element signature="e#18718#19601#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -114,8 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>heading</find>
-      <find>download</find>
       <find>toggleCategory</find>
       <find>.activity</find>
       <find>span.activitya:hover</find>
@@ -144,6 +143,8 @@
       <find>overview</find>
       <find>.one</find>
       <find>1366px</find>
+      <find>.how .ellipse .circle1</find>
+      <find>.two</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,8 +160,8 @@
         <option value="$PROJECT_DIR$/pages/howitworks.html" />
         <option value="$PROJECT_DIR$/include.footer.pre.description.html" />
         <option value="$PROJECT_DIR$/pages/homepage.html" />
-        <option value="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" />
         <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" />
       </list>
     </option>
   </component>
@@ -308,12 +309,12 @@
       <workItem from="1498196800500" duration="260000" />
       <workItem from="1498201987995" duration="1673000" />
       <workItem from="1498451649274" duration="20273000" />
-      <workItem from="1498532637779" duration="5492000" />
+      <workItem from="1498532637779" duration="8816000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61350000" />
+    <option name="totallyTimeSpent" value="64674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -371,7 +372,7 @@
           <folding>
             <element signature="e#2439#3197#0" expanded="false" />
             <element signature="e#3294#3431#0" expanded="false" />
-            <element signature="e#17477#18360#0" expanded="false" />
+            <element signature="e#18718#19601#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -450,7 +451,7 @@
           <folding>
             <element signature="e#2439#3197#0" expanded="false" />
             <element signature="e#3294#3431#0" expanded="false" />
-            <element signature="e#17477#18360#0" expanded="false" />
+            <element signature="e#18718#19601#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -497,7 +498,7 @@
           <folding>
             <element signature="e#2439#3197#0" expanded="false" />
             <element signature="e#3294#3431#0" expanded="false" />
-            <element signature="e#17477#18360#0" expanded="false" />
+            <element signature="e#18718#19601#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -544,7 +545,7 @@
           <folding>
             <element signature="e#2439#3197#0" expanded="false" />
             <element signature="e#3294#3431#0" expanded="false" />
-            <element signature="e#17477#18360#0" expanded="false" />
+            <element signature="e#18718#19601#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -709,22 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/homepage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="54" column="31" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="7344" column="18" lean-forward="false" selection-start-line="7344" selection-start-column="18" selection-end-line="7344" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include.footer.pre.description.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -733,15 +718,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="210" column="32" lean-forward="false" selection-start-line="210" selection-start-column="32" selection-end-line="210" selection-end-column="32" />
+        <state relative-caret-position="285">
+          <caret line="206" column="41" lean-forward="false" selection-start-line="206" selection-start-column="41" selection-end-line="206" selection-end-column="41" />
           <folding>
             <element signature="e#2439#3197#0" expanded="false" />
             <element signature="e#3294#3431#0" expanded="false" />
-            <element signature="e#17477#18360#0" expanded="false" />
+            <element signature="e#18718#19601#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="5888" column="16" lean-forward="false" selection-start-line="5888" selection-start-column="16" selection-end-line="5888" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>

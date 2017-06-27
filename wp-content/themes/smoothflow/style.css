@@ -5858,9 +5858,9 @@ footer .subscribe {
 
 .keyfeatures .screens .one {
     background: url(images/screensone.png) no-repeat;
-    width: 578px;
+    width: 778px;
     height: 333px;
-    background-size: 139%;
+    background-size: 102%;
     float: left;
     top: 0;
     position: relative;
@@ -5869,9 +5869,9 @@ footer .subscribe {
 
 .keyfeatures .screens .two {
     background: url(images/screenstwo.png) no-repeat;
-    width: 578px;
+    width: 778px;
     height: 333px;
-    background-size: 139%;
+    background-size: 102%;
     position: absolute;
     top: 0;
     left: 165px;
@@ -5880,13 +5880,13 @@ footer .subscribe {
 
 .keyfeatures .screens .three {
     background: url(images/screensthree.png) no-repeat;
-    width: 810px;
-    height: 335px;
-    background-size: 100%;
+    width: 808px;
+    height: 333px;
+    background-size: 102%;
     position: absolute;
-    top: -2px;
+    top: 0px;
     left: 341px;
-    float: left
+    float: left;
 }
 
 .how {
@@ -7319,20 +7319,24 @@ div.wpcf7-mail-sent-ok {
         height: 670px
     }
     .how .ellipse .circle2 {
-        top: 302px;
-        left: 395px
+        top: 282px;
+        left: 375px;
+        opacity:0;
     }
     .how .ellipse .circle1 {
-        top: 118px;
-        left: 211px
+        top: 98px;
+        left: 191px;
+        opacity:0;
     }
     .how .ellipse .circle3 {
-        top: 298px;
-        right: 405px
+        top: 318px;
+        right: 415px;
+        opacity:0;
     }
     .how .ellipse .circle4 {
-        top: 107px;
-        right: 199px
+        top: 127px;
+        right: 219px;
+        opacity:0;
     }
     .path1,
     .path2,
@@ -7343,6 +7347,11 @@ div.wpcf7-mail-sent-ok {
         top: 237px;
         z-index: 1;
         opacity: 0;
+    }
+    .screens .one,
+    .screens .two,
+    .screens .three {
+        display: none;
     }
     .keyfeatures .direction {
         position: absolute
