@@ -25,12 +25,12 @@
             <div class="search-box">
                 <input type="text" placeholder="Search by name" ng-model="SearchKeyword" onchange="" ng-click="setDropResults()">
                 <div class="search-results-drop custom-scroll" ng-if="dropResults && actlist">
-                    <div>
-                        <div ng-repeat="activity in activitiescat" ng-click="getAtivityDetails(activity.Category,activity.webicon);">
+                    <ul>
+                        <li ng-repeat="activity in activitiescat" ng-click="getAtivityDetails(activity.Category,activity.webicon);">
                             <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}">
                             <span>{{activity.Category}}</span>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <!-- Start wpb_column vc_column_container vc_col-sm-8-->
