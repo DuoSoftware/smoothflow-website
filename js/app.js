@@ -5,7 +5,8 @@ angular.module('smoothflowwebsite', [
     'ngMaterial',
     'ngMessages',
     'vAccordion',
-    'ngAnimate'
+    'ngAnimate',
+	'angular.filter'
 
 ]).
     config(['$routeProvider', function ($routeProvider) {
