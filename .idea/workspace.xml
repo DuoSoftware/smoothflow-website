@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69e68636-8c4a-40f3-b9d6-c90c3fb08362" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/activities.html" afterPath="$PROJECT_DIR$/pages/activities.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,11 +20,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="activities.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activities.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/activities.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="40" column="62" lean-forward="false" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
+              <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -46,11 +44,11 @@
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <marker date="1498646440266" expanded="false" signature="4853:4885" ph="..." />
-                <marker date="1498646440266" expanded="false" signature="7870:7899" ph="..." />
-                <marker date="1498646440266" expanded="false" signature="8534:8585" ph="..." />
-                <marker date="1498646440266" expanded="false" signature="8841:8870" ph="..." />
-                <marker date="1498646440266" expanded="false" signature="9507:9558" ph="..." />
+                <marker date="1498646574725" expanded="false" signature="4833:4865" ph="..." />
+                <marker date="1498646574725" expanded="false" signature="7850:7879" ph="..." />
+                <marker date="1498646574725" expanded="false" signature="8514:8565" ph="..." />
+                <marker date="1498646574725" expanded="false" signature="8821:8850" ph="..." />
+                <marker date="1498646574725" expanded="false" signature="9487:9538" ph="..." />
               </folding>
             </state>
           </provider>
@@ -66,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="295">
@@ -159,8 +157,8 @@
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/pages/activities.html" />
         <option value="$PROJECT_DIR$/wp-content/themes/smoothflow/style.css" />
+        <option value="$PROJECT_DIR$/pages/activities.html" />
       </list>
     </option>
   </component>
@@ -378,12 +376,12 @@
       <workItem from="1498451649274" duration="20273000" />
       <workItem from="1498532637779" duration="23668000" />
       <workItem from="1498637683584" duration="4644000" />
-      <workItem from="1498645388748" duration="1156000" />
+      <workItem from="1498645388748" duration="1184000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85326000" />
+    <option name="totallyTimeSpent" value="85354000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -441,11 +439,11 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1498646440266" expanded="false" signature="4853:4885" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="7870:7899" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="8534:8585" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="8841:8870" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="9507:9558" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="4833:4865" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="7850:7879" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="8514:8565" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="8821:8850" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="9487:9538" ph="..." />
           </folding>
         </state>
       </provider>
@@ -510,11 +508,11 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1498646440266" expanded="false" signature="4853:4885" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="7870:7899" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="8534:8585" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="8841:8870" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="9507:9558" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="4833:4865" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="7850:7879" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="8514:8565" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="8821:8850" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="9487:9538" ph="..." />
           </folding>
         </state>
       </provider>
@@ -608,11 +606,11 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1498646440266" expanded="false" signature="4853:4885" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="7870:7899" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="8534:8585" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="8841:8870" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="9507:9558" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="4833:4865" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="7850:7879" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="8514:8565" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="8821:8850" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="9487:9538" ph="..." />
           </folding>
         </state>
       </provider>
@@ -924,10 +922,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="8194" column="16" lean-forward="true" selection-start-line="8194" selection-start-column="16" selection-end-line="8194" selection-end-column="16" />
+          <folding>
+            <element signature="e#144952#145178#0" expanded="false" />
+            <element signature="e#145206#145258#0" expanded="false" />
+            <element signature="e#145302#145381#0" expanded="false" />
+            <element signature="e#145409#145458#0" expanded="false" />
+            <element signature="e#145502#145585#0" expanded="false" />
+            <element signature="e#145612#145665#0" expanded="false" />
+            <element signature="e#145744#145777#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/activities.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="40" column="62" lean-forward="false" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
+          <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -947,27 +961,11 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1498646440266" expanded="false" signature="4853:4885" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="7870:7899" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="8534:8585" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="8841:8870" ph="..." />
-            <marker date="1498646440266" expanded="false" signature="9507:9558" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/smoothflow/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="8194" column="16" lean-forward="true" selection-start-line="8194" selection-start-column="16" selection-end-line="8194" selection-end-column="16" />
-          <folding>
-            <element signature="e#144952#145178#0" expanded="false" />
-            <element signature="e#145206#145258#0" expanded="false" />
-            <element signature="e#145302#145381#0" expanded="false" />
-            <element signature="e#145409#145458#0" expanded="false" />
-            <element signature="e#145502#145585#0" expanded="false" />
-            <element signature="e#145612#145665#0" expanded="false" />
-            <element signature="e#145744#145777#0" expanded="false" />
+            <marker date="1498646574725" expanded="false" signature="4833:4865" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="7850:7879" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="8514:8565" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="8821:8850" ph="..." />
+            <marker date="1498646574725" expanded="false" signature="9487:9538" ph="..." />
           </folding>
         </state>
       </provider>

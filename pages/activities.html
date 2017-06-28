@@ -38,7 +38,7 @@
                 <!-- activities goes here -->
                 <div class="title-row" ng-repeat="(key, value) in activitiescat | groupBy: 'class'">
                     <div class="title-heading">{{key}}</div>
-                    <div class="wpb_column vc_column_container activity" ng-repeat="activity in value" ng-click="getAtivityDetails(activity.Category,activity.webicon);">
+                    <div class="wpb_column activity" ng-repeat="activity in value" ng-click="getAtivityDetails(activity.Category,activity.webicon);">
                         <div class="vc_column-inner" style="text-align: center">
                             <!-- content goes here -->
                             <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-bottom:15px;">
