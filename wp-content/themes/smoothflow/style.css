@@ -8390,6 +8390,7 @@ a.activitya:hover, a.activitya:active {
     margin-bottom: 30px;
     color: #000;
     font-size: 14px;
+    overflow:hidden;
 }
 .title-row .title-heading{
     border-bottom: solid 1px #dddddd;

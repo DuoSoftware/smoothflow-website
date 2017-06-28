@@ -25,22 +25,85 @@
             <div class="search-box">
                 <input type="text" placeholder="Search by name" ng-model="SearchKeyword" onchange="" ng-click="setDropResults()">
                 <div class="search-results-drop custom-scroll" ng-if="dropResults && actlist">
-                    <ul>
-                        <li ng-repeat="activity in activitiescat" ng-click="getAtivityDetails(activity.Category,activity.webicon);">
+                    <div>
+                        <div ng-repeat="activity in activitiescat" ng-click="getAtivityDetails(activity.Category,activity.webicon);">
                             <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}">
                             <span>{{activity.Category}}</span>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- Start wpb_column vc_column_container vc_col-sm-8-->
             <div ng-hide="actlist" style="padding:20px 10% 20px 20px;overflow: hidden;">
                 <!-- activities goes here -->
-                <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat" ng-click="getAtivityDetails(activity.Category,activity.webicon);" style="width: 120px;">
-                    <div class="vc_column-inner" style="text-align: center">
-                        <!-- content goes here -->
-                        <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-bottom:15px;">
-                        <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>
+                <div class="title-row">
+                    <div class="title-heading">Tools</div>
+                    <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat" ng-click="getAtivityDetails(activity.Category,activity.webicon);" style="width: 120px;" ng-if="activity.class == 'Tools'">
+                        <div class="vc_column-inner" style="text-align: center">
+                            <!-- content goes here -->
+                            <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-bottom:15px;">
+                            <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-row">
+                    <div class="title-heading">Communication</div>
+                    <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat" ng-click="getAtivityDetails(activity.Category,activity.webicon);" style="width: 120px;" ng-if="activity.class == 'Communication'">
+                        <div class="vc_column-inner" style="text-align: center">
+                            <!-- content goes here -->
+                            <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-bottom:15px;">
+                            <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-row">
+                    <div class="title-heading">Database</div>
+                    <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat" ng-click="getAtivityDetails(activity.Category,activity.webicon);" style="width: 120px;" ng-if="activity.class == 'Database'">
+                        <div class="vc_column-inner" style="text-align: center">
+                            <!-- content goes here -->
+                            <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-bottom:15px;">
+                            <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-row">
+                    <div class="title-heading">Storage</div>
+                    <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat" ng-click="getAtivityDetails(activity.Category,activity.webicon);" style="width: 120px;" ng-if="activity.class == 'Storage'">
+                        <div class="vc_column-inner" style="text-align: center">
+                            <!-- content goes here -->
+                            <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-bottom:15px;">
+                            <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-row">
+                    <div class="title-heading">Social</div>
+                    <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat" ng-click="getAtivityDetails(activity.Category,activity.webicon);" style="width: 120px;" ng-if="activity.class == 'Social'">
+                        <div class="vc_column-inner" style="text-align: center">
+                            <!-- content goes here -->
+                            <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-bottom:15px;">
+                            <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-row">
+                    <div class="title-heading">Payment</div>
+                    <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat" ng-click="getAtivityDetails(activity.Category,activity.webicon);" style="width: 120px;" ng-if="activity.class == 'Payments'">
+                        <div class="vc_column-inner" style="text-align: center">
+                            <!-- content goes here -->
+                            <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-bottom:15px;">
+                            <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-row">
+                    <div class="title-heading">IoT</div>
+                    <div class="wpb_column vc_column_container vc_col-sm-2 activity" ng-repeat="activity in activitiescat" ng-click="getAtivityDetails(activity.Category,activity.webicon);" style="width: 120px;" ng-if="activity.class.toLowerCase() == 'iot'">
+                        <div class="vc_column-inner" style="text-align: center">
+                            <!-- content goes here -->
+                            <img src="wp-content/themes/smoothflow/images/{{activity.webicon}}" style="margin-bottom:15px;">
+                            <span style="color: black;font-size: 14px"><center>{{activity.Category}}</center></span>
+                        </div>
                     </div>
                 </div>
                 <!-- activities ends here -->
