@@ -364,10 +364,7 @@ angular.module('smoothflowwebsite', [
         // Kasun_Wijeratne_6_21_2017 - END
         //============================================
     }])
-    // <<<<<<< HEAD
-    //     .controller('activityController', ['$scope', '$http', '$location', '$rootScope', '$routeParams', '$filter', function ($scope, $http, $location, $rootScope, $routeParams, $filter) {
-    //         //console.log("activity controller hits");
-    // =======
+    
     .controller('activityController', ['$scope', '$http', '$location', '$rootScope', '$routeParams', '$filter', '$timeout', function ($scope, $http, $location, $rootScope, $routeParams, $filter, $timeout) {
 
         $scope.thisRouterState = false;
@@ -382,8 +379,7 @@ angular.module('smoothflowwebsite', [
             }, 700);
         };
 
-        //console.log("activity controller hits");
-        // >>>>>>> origin/master
+      
 
         $scope.SearchKeyword = "";
 
