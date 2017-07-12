@@ -5,63 +5,164 @@ angular.module('smoothflowwebsite', [
     'ngMaterial',
     'ngMessages',
     'vAccordion',
-    'ngAnimate'
+    'ngAnimate',
+    'angular.filter'
 
 ]).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/', {
             templateUrl: 'pages/homepage.html',
-            controller: 'mainController'
+            controller: 'mainController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/pricing', {
             templateUrl: 'pages/pricing.html',
-            controller: 'mainController'
+            controller: 'mainController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/features', {
             templateUrl: 'pages/features.html',
-            controller: 'mainController'
+            controller: 'mainController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/howitworks', {
             templateUrl: 'pages/howitworks.html',
-            controller: 'mainController'
+            controller: 'mainController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/client', {
             templateUrl: 'pages/client.html',
-            controller: 'mainController'
+            controller: 'mainController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/activities', {
             templateUrl: 'pages/activities.html',
-            controller: 'activityController'
+            controller: 'activityController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/blog', {
             templateUrl: 'pages/blog.html',
-            controller: 'blogController'
+            controller: 'blogController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/blog/:post', {
             templateUrl: 'pages/blogpost.html',
-            controller: 'blogController'
+            controller: 'blogController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/about', {
             templateUrl: 'pages/about.html',
-            controller: 'mainController'
+            controller: 'mainController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/faq', {
             templateUrl: 'pages/faq.html',
-            controller: 'mainController'
+            controller: 'mainController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/acceptable-use-policy', {
             templateUrl: 'pages/acceptable-use-policy.html',
-            controller: 'mainController'
+            controller: 'mainController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/terms-and-conditions', {
             templateUrl: 'pages/terms-and-conditions.html',
-            controller: 'mainController'
+            controller: 'mainController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/contact', {
             templateUrl: 'pages/contact.html',
-            controller: 'contactController'
+            controller: 'contactController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/details/:DisplayName', {
             templateUrl: 'pages/activitydetails.html',
-            controller: 'activityController'
+            controller: 'activityController',
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).otherwise({ redirectTo: '/pagenotfound' });
-
-
     }])
 
-    .controller('mainController', ['$scope', '$rootScope', '$location', '$mdDialog', '$http', '$timeout', function ($scope, $rootScope, $location, $mdDialog, $http, $timeout) {
+    .controller('mainController', ['$scope', '$rootScope', '$location', '$mdDialog', '$http', '$timeout', '$routeParams','$mdToast', function ($scope, $rootScope, $location, $mdDialog, $http, $timeout, $routeParams,$mdToast) {
         //console.log("application stated");
 
+        $scope.thisRouterState = false;
+        $timeout(function () {
+            $scope.thisRouterState = true;
+        }, 700);
+
+        $scope.setRoutingBg = function () {
+            $scope.thisRouterState = false;
+            $timeout(function () {
+                $scope.thisRouterState = true;
+            }, 700);
+        };
 
         // var footerElem = angular.element('#footerBanner');
         // if(footerElem)footerElem.css('visibility','invisible');
+
+        //request Demo-----------------------------------
+
+        $scope.RequestDemo = function (emailDetails) {
+            console.log(emailDetails)
+           var req={
+               'name':emailDetails.name,
+               'email':emailDetails.email,
+               'subject':'Request Demo',
+               'body':'Request Demo'
+           }
+            $scope.isSend = true;
+            $http({
+                url: "php/sendemail.php",
+                method: "POST",
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                data: {
+                    data: req
+                }
+            }).success(function (data, status, headers, config) {
+                console.log(data);
+                $scope.message = "Email sent successfully";
+                $scope.showMessage($scope.message);
+                $scope.user = "";
+                console.log($scope.message);
+            }).error(function (data, status, headers, config) {
+                console.log(data);
+                $scope.user = "";
+                $scope.isSend = false;
+            });
+
+
+             $scope.showMessage();
+        }
+
+           $scope.showMessage = function (msg) {
+            $mdToast.show($mdToast.simple().content(msg).position('bottom right').hideDelay(3000));
+        }
+        //end request Demo----------------------------------
+
+
+
+
+
+
+
+
+
+
 
         //28-03-2017 add by lakmini==============
 
@@ -263,8 +364,26 @@ angular.module('smoothflowwebsite', [
         // Kasun_Wijeratne_6_21_2017 - END
         //============================================
     }])
-    .controller('activityController', ['$scope', '$http', '$location', '$rootScope', '$routeParams', '$filter', function ($scope, $http, $location, $rootScope, $routeParams, $filter) {
+    // <<<<<<< HEAD
+    //     .controller('activityController', ['$scope', '$http', '$location', '$rootScope', '$routeParams', '$filter', function ($scope, $http, $location, $rootScope, $routeParams, $filter) {
+    //         //console.log("activity controller hits");
+    // =======
+    .controller('activityController', ['$scope', '$http', '$location', '$rootScope', '$routeParams', '$filter', '$timeout', function ($scope, $http, $location, $rootScope, $routeParams, $filter, $timeout) {
+
+        $scope.thisRouterState = false;
+        $timeout(function () {
+            $scope.thisRouterState = true;
+        }, 700);
+
+        $scope.setRoutingBg = function () {
+            $scope.thisRouterState = false;
+            $timeout(function () {
+                $scope.thisRouterState = true;
+            }, 700);
+        };
+
         //console.log("activity controller hits");
+        // >>>>>>> origin/master
 
         $scope.SearchKeyword = "";
 
@@ -274,9 +393,9 @@ angular.module('smoothflowwebsite', [
         // console.log($scope.detailsName);
         $scope.$watch('SearchKeyword', function (keyword) {
             var _activities;
-            $scope.actlist = false;
+            // if($scope.actlist)$scope.actlist = false;
             $scope.activitiescat = [];
-            if (!keyword.length) _activities = $scope._categories;
+            if (!keyword.length) _activities = $scope._categorieslist;
             else {
                 keyword = keyword.toLowerCase();
                 _activities = SearchActivitiesByName(keyword);
@@ -287,9 +406,17 @@ angular.module('smoothflowwebsite', [
 
         });
 
+        // Kasun_Wijeratne
+        $scope.dropResults = false;
+        $scope.setDropResults = function () {
+            $scope.dropResults = true;
+        }
+        // Kasun_Wijeratne
+
         $scope.toggleCategory = function (category) {
             $scope.selectedActivityCat = category;
             $scope.SearchKeyword = "";
+            $scope.dropResults = false;
             if (category == "all") {
                 $scope.actlist = false;
                 $scope.categories();
@@ -304,7 +431,7 @@ angular.module('smoothflowwebsite', [
         }
 
         var SearchActivitiesByName = function (name) {
-            $scope.actlist = false;
+            // $scope.actlist = false;
             return $scope.catList.filter(function (activity) {
                 var activity_name = activity.Category.toLowerCase();
                 return (activity_name.search(name) !== -1);
@@ -475,6 +602,7 @@ angular.module('smoothflowwebsite', [
         // add by lakmini 22-05-2017  
         $scope.getAtivityDetails = function (category, catImage) {
             $scope.actlist = true;
+            $scope.dropResults = false;
             // alert(category);
             $scope.selectCategory = category;
             $scope.selectcatImage = catImage;
@@ -492,7 +620,18 @@ angular.module('smoothflowwebsite', [
         };
         //=========================================
 
-    }]).controller('blogController', ['$scope', '$route', '$routeParams', function ($scope, $route, $routeParams) {
+    }]).controller('blogController', ['$scope', '$route', '$routeParams', '$timeout', function ($scope, $route, $routeParams, $timeout) {
+        $scope.thisRouterState = false;
+        $timeout(function () {
+            $scope.thisRouterState = true;
+        }, 700);
+
+        $scope.setRoutingBg = function () {
+            $scope.thisRouterState = false;
+            $timeout(function () {
+                $scope.thisRouterState = true;
+            }, 700);
+        };
         // console.log("activity controller hits");
 
         if ($routeParams.post != null) {
@@ -519,7 +658,7 @@ angular.module('smoothflowwebsite', [
         ]
 
     }]).controller('contactController', ['$scope', '$rootScope', '$http', '$mdToast', function ($scope, $rootScope, $http, $mdToast) {
-      //  debugger;
+        //  debugger;
 
         $scope.isSend = false;
         $scope.sendMailContact = function (emailDetails) {

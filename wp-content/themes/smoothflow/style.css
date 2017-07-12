@@ -7005,7 +7005,7 @@ div.wpcf7-mail-sent-ok {
     .overview img{
         position: relative;
         opacity:0;
-        left: 70px;
+        left: 50px;
     }
     .overview .col .pencil1 {
         background: url(images/pencil1.png) no-repeat;
@@ -7633,6 +7633,113 @@ div.wpcf7-mail-sent-ok {
     -o-animation: flickerAnimation 1.5s infinite;
     animation: flickerAnimation 1.5s infinite;
 }
+.animate-fade-in-out {
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    transition-property: none;
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 1;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.animate-fade-in-out.ng-enter {
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.animate-fade-in-out.ng-enter.ng-enter-active {
+    transition-property: all;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+.animate-fade-in-out.ng-leave {
+    opacity: 1;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.animate-fade-in-out.ng-leave.ng-leave-active {
+    transition-property: all;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.animate-fade-in-out.ng-hide {
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.animate-fade-in-out.ng-hide-add-active, .animate-fade-in-out.ng-hide-remove-active {
+    transition-property: all;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.animate-slide-up {
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    transition-property: none;
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 1;
+}
+.animate-slide-up.ng-enter {
+    transform: translateY(100%);
+    opacity: 0;
+}
+.animate-slide-up.ng-enter.ng-enter-active {
+    transition-property: all;
+    transform: translateY(0);
+    opacity: 1;
+}
+.animate-slide-up.ng-leave {
+    transform: translateY(0);
+    opacity: 1;
+}
+.animate-slide-up.ng-leave.ng-leave-active {
+    transition-property: all;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+.animate-slide-up.ng-hide {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+.animate-slide-up.ng-hide-add-active, .animate-slide-up.ng-hide-remove-active {
+    transition-property: all;
+}
+
+.cover-bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
 /*Animations*/
 
 @media only screen and (min-width:768px) {
@@ -8033,8 +8140,44 @@ div.wpcf7-mail-sent-ok {
     /*-webkit-box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;*/
     /*-moz-box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;*/
     /*box-shadow: inset 0px 0px 6px #aaa,inset 0px 0px 6px #aaa;*/
-    margin-bottom: 10px;padding: 15px;
+    margin: 15px;
+    position: relative;
     /*background: #f1f1f1;*/
+}
+.search-box .search-results-drop{
+    max-height: 300px;
+    overflow-y: scroll;
+    border: solid 1px #ddd;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    background: #fff;
+    z-index: 5;
+    left: 0;
+    /*margin: 0 15px;*/
+    width:100%;
+}
+.search-box .search-results-drop ul{
+    display: block;
+    overflow: hidden;
+    margin:0;
+}
+.search-box .search-results-drop ul li{
+    display: inline-block;
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.search-box .search-results-drop ul li:hover{
+    background: #eeeeee;
+}
+.search-box .search-results-drop ul li img{
+    display: inline-block;
+    width: 20px;
+    margin-right: 10px;
+}
+.search-box .search-results-drop ul li span{
+    display: inline-block;
+    color: #000;
 }
 .search-box>input{
     border-radius: 3px;margin: 0;
@@ -8049,6 +8192,8 @@ div.wpcf7-mail-sent-ok {
     /*border: 2px solid #e5ded6;*/
     /*border-radius: 5px;*/
     height: 120px;
+    width:120px;
+    float:left;
     cursor: pointer;
     outline:none!important;
     -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
@@ -8247,6 +8392,7 @@ a.activitya:hover, a.activitya:active {
     margin-bottom: 30px;
     color: #000;
     font-size: 14px;
+    overflow:hidden;
 }
 .title-row .title-heading{
     border-bottom: solid 1px #dddddd;
@@ -8259,71 +8405,19 @@ a.activitya:hover, a.activitya:active {
     margin: 30px 0;
     color: #aaa;
 }
-
-/*Animations*/
-.animate-fade-in-out {
-    -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    transition-property: none;
-    transition-duration: 400ms;
-    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    opacity: 1;
-}
-.animate-fade-in-out.ng-enter {
-    opacity: 0;
-}
-.animate-fade-in-out.ng-enter.ng-enter-active {
-    transition-property: all;
-    opacity: 1;
-}
-.animate-fade-in-out.ng-leave {
-    opacity: 1;
-}
-.animate-fade-in-out.ng-leave.ng-leave-active {
-    transition-property: all;
-    opacity: 0;
-}
-.animate-fade-in-out.ng-hide {
-    opacity: 0;
-}
-.animate-fade-in-out.ng-hide-add-active, .animate-fade-in-out.ng-hide-remove-active {
-    transition-property: all;
+.custom-scroll::-webkit-scrollbar {
+    width: 10px;
+    background-color: #fff;
 }
 
-.animate-slide-up {
-    -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    transition-property: none;
-    transition-duration: 400ms;
-    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    opacity: 1;
+.custom-scroll::-webkit-scrollbar-track {
+    display: none;
 }
-.animate-slide-up.ng-enter {
-    transform: translateY(100%);
-    opacity: 0;
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
 }
-.animate-slide-up.ng-enter.ng-enter-active {
-    transition-property: all;
-    transform: translateY(0);
-    opacity: 1;
-}
-.animate-slide-up.ng-leave {
-    transform: translateY(0);
-    opacity: 1;
-}
-.animate-slide-up.ng-leave.ng-leave-active {
-    transition-property: all;
-    transform: translateY(-100%);
-    opacity: 0;
-}
-.animate-slide-up.ng-hide {
-    transform: translateY(-100%);
-    opacity: 0;
-}
-.animate-slide-up.ng-hide-add-active, .animate-slide-up.ng-hide-remove-active {
-    transition-property: all;
-}
-/*Animations*/
 
 /*span.activitya:hover{*/
     /*!*font-size: 150%; *!*/

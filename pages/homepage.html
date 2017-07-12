@@ -72,4 +72,26 @@
         </div>
         <a class="link" href="#/pricing">Get Started now</a>
     </section>
+    <section id="requestdemo" class="demo" style="background-color: #34485d">
+
+        <div class="row" >
+            <div layout="row" md-theme="docs-dark" layout-align="space-around center" style="    margin-top: 56px;">
+                <md-input-container md-theme="docs-dark" class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label style="color: #40c4ff">Name</label>
+                    <md-icon style="fill: #0dc2a7" md-svg-src="wp-content/themes/smoothflow/images/ic_person_24px.svg" class="name"></md-icon>
+                    <input ng-model="user.name" style="color: snow; border-bottom-color: #0dc2a7;background-color: transparent;box-shadow:none;" type="text">
+                </md-input-container>
+
+                <md-input-container  md-theme="docs-dark" class="md-block">
+                    <!-- Use floating placeholder instead of label -->
+                    <label style="color: #40c4ff">Email</label>
+                    <md-icon style="fill: #0dc2a7" md-svg-src="wp-content/themes/smoothflow/images/ic_email_24px.svg" class="email"></md-icon>
+                    <input ng-model="user.email" type="email" style="color: snow; border-bottom-color: #0dc2a7;background-color: transparent;box-shadow:none;"  ng-required="true">
+                </md-input-container>
+
+                <a class="link" style="margin-bottom: 41px;" ng-click="RequestDemo(user)">Request Demo</a>
+            </div>
+        </div>
+    </section>
 </div>
