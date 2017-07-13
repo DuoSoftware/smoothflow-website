@@ -8192,6 +8192,8 @@ div.wpcf7-mail-sent-ok {
     /*border: 2px solid #e5ded6;*/
     /*border-radius: 5px;*/
     height: 120px;
+    width:120px;
+    float:left;
     cursor: pointer;
     outline:none!important;
     -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);

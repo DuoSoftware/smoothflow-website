@@ -28,6 +28,7 @@
     "angular-route": "~1.4.0",
     "html5-boilerplate": "~5.2.0",
     "jquery": "^2.2.3",
-    "Ionicons": "ionicons#^2.0.1"
+    "Ionicons": "ionicons#^2.0.1",
+    "angular-filter": "^0.5.16"
   }
 }

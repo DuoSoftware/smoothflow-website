@@ -34,7 +34,7 @@
                         <textarea ng-model="Emaildetails.body" name="textarea-121" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required contact-form-message"
                             aria-required="true" aria-invalid="false" placeholder="Write a message..."></textarea>
                         <div align="center">
-                            <input type="button" ng-click="sendMailContact(Emaildetails)" value="Send Message" class="wpcf7-form-control wpcf7-submit submit" />
+                            <input type="button" ng-disabled="isSend" ng-click="sendMailContact(Emaildetails)" value="Send Message" class="wpcf7-form-control wpcf7-submit submit" />
                         </div>
                         </div>
                     <div class="wpcf7-response-output wpcf7-display-none">

@@ -5,114 +5,164 @@ angular.module('smoothflowwebsite', [
     'ngMaterial',
     'ngMessages',
     'vAccordion',
-    'ngAnimate'
+    'ngAnimate',
+    'angular.filter'
 
 ]).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/', {
             templateUrl: 'pages/homepage.html',
             controller: 'mainController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/pricing', {
             templateUrl: 'pages/pricing.html',
             controller: 'mainController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/features', {
             templateUrl: 'pages/features.html',
             controller: 'mainController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/howitworks', {
             templateUrl: 'pages/howitworks.html',
             controller: 'mainController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/client', {
             templateUrl: 'pages/client.html',
             controller: 'mainController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/activities', {
             templateUrl: 'pages/activities.html',
             controller: 'activityController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/blog', {
             templateUrl: 'pages/blog.html',
             controller: 'blogController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/blog/:post', {
             templateUrl: 'pages/blogpost.html',
             controller: 'blogController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/about', {
             templateUrl: 'pages/about.html',
             controller: 'mainController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/faq', {
             templateUrl: 'pages/faq.html',
             controller: 'mainController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/acceptable-use-policy', {
             templateUrl: 'pages/acceptable-use-policy.html',
             controller: 'mainController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/terms-and-conditions', {
             templateUrl: 'pages/terms-and-conditions.html',
             controller: 'mainController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/contact', {
             templateUrl: 'pages/contact.html',
             controller: 'contactController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).when('/details/:DisplayName', {
             templateUrl: 'pages/activitydetails.html',
             controller: 'activityController',
-			resolve: {
-				isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
-			}
+            resolve: {
+                isRouterOn: function ($route) { $route.current.params.isRouterOn = false; }
+            }
         }).otherwise({ redirectTo: '/pagenotfound' });
     }])
 
-    .controller('mainController', ['$scope', '$rootScope', '$location', '$mdDialog', '$http', '$timeout','$routeParams', function ($scope, $rootScope, $location, $mdDialog, $http, $timeout,$routeParams) {
+    .controller('mainController', ['$scope', '$rootScope', '$location', '$mdDialog', '$http', '$timeout', '$routeParams','$mdToast', function ($scope, $rootScope, $location, $mdDialog, $http, $timeout, $routeParams,$mdToast) {
         //console.log("application stated");
 
-		$scope.thisRouterState = false;
-		$timeout(function () {
-			$scope.thisRouterState = true;
-		}, 700);
+        $scope.thisRouterState = false;
+        $timeout(function () {
+            $scope.thisRouterState = true;
+        }, 700);
 
-		$scope.setRoutingBg = function(){
-			$scope.thisRouterState = false;
-			$timeout(function () {
-				$scope.thisRouterState = true;
-			}, 700);
-		};
+        $scope.setRoutingBg = function () {
+            $scope.thisRouterState = false;
+            $timeout(function () {
+                $scope.thisRouterState = true;
+            }, 700);
+        };
 
-		// var footerElem = angular.element('#footerBanner');
-		// if(footerElem)footerElem.css('visibility','invisible');
+        // var footerElem = angular.element('#footerBanner');
+        // if(footerElem)footerElem.css('visibility','invisible');
+
+        //request Demo-----------------------------------
+
+        $scope.RequestDemo = function (emailDetails) {
+            console.log(emailDetails)
+           var req={
+               'name':emailDetails.name,
+               'email':emailDetails.email,
+               'subject':'Request Demo',
+               'body':'Request Demo'
+           }
+            $scope.isSend = true;
+            $http({
+                url: "php/sendemail.php",
+                method: "POST",
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                data: {
+                    data: req
+                }
+            }).success(function (data, status, headers, config) {
+                console.log(data);
+                $scope.message = "Email sent successfully";
+                $scope.showMessage($scope.message);
+                $scope.user = "";
+                console.log($scope.message);
+            }).error(function (data, status, headers, config) {
+                console.log(data);
+                $scope.user = "";
+                $scope.isSend = false;
+            });
+
+
+             $scope.showMessage();
+        }
+
+           $scope.showMessage = function (msg) {
+            $mdToast.show($mdToast.simple().content(msg).position('bottom right').hideDelay(3000));
+        }
+        //end request Demo----------------------------------
+
+
+
+
+
+
+
+
+
+
 
         //28-03-2017 add by lakmini==============
 
@@ -205,130 +255,131 @@ angular.module('smoothflowwebsite', [
                 $scope.false = false;
             });
         };
-		// Animate footer
-		$scope.footerIsOn = false;
-		angular.element(window).scroll(function() {
-			var elem = angular.element('#footerBanner');
-			var elem2 = angular.element('#overview-image');
-			var elem3 = angular.element('.path1');
-			var elem4 = angular.element('.path2');
-			var elem5 = angular.element('.path3');
-			var elem6 = angular.element('.screens .one');
-			var elem7 = angular.element('.screens .two');
-			var elem8 = angular.element('.screens .three');
-			var elem9 = angular.element('.keyfeatures');
-			var elem10 = angular.element('.title');
-			var elem11 = angular.element('.circle1');
-			var elem12 = angular.element('.circle2');
-			var elem13 = angular.element('.circle3');
-			var elem14 = angular.element('.circle4');
-			if(elem != undefined){
-				var hT,
-					hH = elem.outerHeight(),
-					wH = $(window).height(),
-					wS = $(this).scrollTop();
+        // Animate footer
+        $scope.footerIsOn = false;
+        angular.element(window).scroll(function () {
+            var elem = angular.element('#footerBanner');
+            var elem2 = angular.element('#overview-image');
+            var elem3 = angular.element('.path1');
+            var elem4 = angular.element('.path2');
+            var elem5 = angular.element('.path3');
+            var elem6 = angular.element('.screens .one');
+            var elem7 = angular.element('.screens .two');
+            var elem8 = angular.element('.screens .three');
+            var elem9 = angular.element('.keyfeatures');
+            var elem10 = angular.element('.title');
+            var elem11 = angular.element('.circle1');
+            var elem12 = angular.element('.circle2');
+            var elem13 = angular.element('.circle3');
+            var elem14 = angular.element('.circle4');
+            if (elem != undefined) {
+                var hT,
+                    hH = elem.outerHeight(),
+                    wH = $(window).height(),
+                    wS = $(this).scrollTop();
 
-				if (wS > (hH-wH)){
-					elem.fadeIn('slow');
-				}else{
-					elem.fadeOut('slow');
-				}
-			}
+                if (wS > (hH - wH)) {
+                    elem.fadeIn('slow');
+                } else {
+                    elem.fadeOut('slow');
+                }
+            }
 
-			if(elem2 != undefined){
-				var hT2,
-					hH2 = elem2.outerHeight(),
-					wH2 = $(window).height(),
-					wS2 = $(this).scrollTop();
+            if (elem2 != undefined) {
+                var hT2,
+                    hH2 = elem2.outerHeight(),
+                    wH2 = $(window).height(),
+                    wS2 = $(this).scrollTop();
 
-				if (wS2 > (hH2-wH2)){
-					elem2.animate({
-						'left':'0px',
-						'opacity':'1'
-					}, 700);
-				}
-			}
+                if (wS2 > (hH2 - wH2)) {
+                    elem2.animate({
+                        'left': '0px',
+                        'opacity': '1'
+                    }, 700);
+                }
+            }
 
-			if(elem3 != undefined && elem4 != undefined && elem5 != undefined){
-				var hT3 = elem9.offset().top,
-					hH3 = elem9.outerHeight(),
-					wH3 = $(window).height(),
-					wS3 = $(this).scrollTop();
+            if (elem3 != undefined && elem4 != undefined && elem5 != undefined) {
+                var hT3 = elem9.offset().top,
+                    hH3 = elem9.outerHeight(),
+                    wH3 = $(window).height(),
+                    wS3 = $(this).scrollTop();
 
-				if (wS3 > (hT3+hH3-wH3)-400){
-					elem3.animate({
-						'top':'267px',
-						'opacity':'1'
-					}, 400, function () {
-						elem6.fadeIn();
-						elem4.animate({
-							'top':'267px',
-							'opacity':'1'
-						}, 400, function () {
-							elem7.fadeIn();
-							elem5.animate({
-								'top':'267px',
-								'opacity':'1'
-							}, 400, function () {
-								elem8.fadeIn();
-							});
-						});
-					});
-				}
-			}
+                if (wS3 > (hT3 + hH3 - wH3) - 400) {
+                    elem3.animate({
+                        'top': '267px',
+                        'opacity': '1'
+                    }, 400, function () {
+                        elem6.fadeIn();
+                        elem4.animate({
+                            'top': '267px',
+                            'opacity': '1'
+                        }, 400, function () {
+                            elem7.fadeIn();
+                            elem5.animate({
+                                'top': '267px',
+                                'opacity': '1'
+                            }, 400, function () {
+                                elem8.fadeIn();
+                            });
+                        });
+                    });
+                }
+            }
 
-			if(elem11 != undefined && elem12 != undefined && elem13 != undefined && elem14 != undefined){
-				var hT4 = elem10.offset().top,
-					hH4 = elem10.outerHeight(),
-					wH4 = $(window).height(),
-					wS4 = $(this).scrollTop();
+            if (elem11 != undefined && elem12 != undefined && elem13 != undefined && elem14 != undefined) {
+                var hT4 = elem10.offset().top,
+                    hH4 = elem10.outerHeight(),
+                    wH4 = $(window).height(),
+                    wS4 = $(this).scrollTop();
 
-				if (wS4 > (hT4+hH4-wH4)){
-					elem11.animate({
-						'top':'118px',
-						'left':'211px',
-						'opacity':'1'
-					}, 300, function () {
-						elem12.animate({
-							'top':'302px',
-							'left':'395px',
-							'opacity':'1'
-						}, 300, function () {
-							elem13.animate({
-								'top':'298px',
-								'right':'405px',
-								'opacity':'1'
-							}, 300, function () {
-								elem14.animate({
-									'top':'107px',
-									'right':'199px',
-									'opacity':'1'
-								}, 300);
-							});
-						});
-					});
-				}
-			}
-		});
-		// Animate footer
+                if (wS4 > (hT4 + hH4 - wH4)) {
+                    elem11.animate({
+                        'top': '118px',
+                        'left': '211px',
+                        'opacity': '1'
+                    }, 300, function () {
+                        elem12.animate({
+                            'top': '302px',
+                            'left': '395px',
+                            'opacity': '1'
+                        }, 300, function () {
+                            elem13.animate({
+                                'top': '298px',
+                                'right': '405px',
+                                'opacity': '1'
+                            }, 300, function () {
+                                elem14.animate({
+                                    'top': '107px',
+                                    'right': '199px',
+                                    'opacity': '1'
+                                }, 300);
+                            });
+                        });
+                    });
+                }
+            }
+        });
+        // Animate footer
         // Kasun_Wijeratne_6_21_2017 - END
         //============================================
     }])
-    .controller('activityController', ['$scope', '$http', '$location', '$rootScope', '$routeParams','$filter','$timeout', function ($scope, $http, $location, $rootScope, $routeParams,$filter,$timeout) {
+    
+    .controller('activityController', ['$scope', '$http', '$location', '$rootScope', '$routeParams', '$filter', '$timeout', function ($scope, $http, $location, $rootScope, $routeParams, $filter, $timeout) {
 
-		$scope.thisRouterState = false;
-		$timeout(function () {
-			$scope.thisRouterState = true;
-		}, 700);
+        $scope.thisRouterState = false;
+        $timeout(function () {
+            $scope.thisRouterState = true;
+        }, 700);
 
-		$scope.setRoutingBg = function(){
-			$scope.thisRouterState = false;
-			$timeout(function () {
-				$scope.thisRouterState = true;
-			}, 700);
-		};
+        $scope.setRoutingBg = function () {
+            $scope.thisRouterState = false;
+            $timeout(function () {
+                $scope.thisRouterState = true;
+            }, 700);
+        };
 
-		//console.log("activity controller hits");
+      
 
         $scope.SearchKeyword = "";
 
@@ -352,10 +403,10 @@ angular.module('smoothflowwebsite', [
         });
 
         // Kasun_Wijeratne
-		$scope.dropResults = false;
-		$scope.setDropResults = function () {
-			$scope.dropResults = true;
-		}
+        $scope.dropResults = false;
+        $scope.setDropResults = function () {
+            $scope.dropResults = true;
+        }
         // Kasun_Wijeratne
 
         $scope.toggleCategory = function (category) {
@@ -551,13 +602,13 @@ angular.module('smoothflowwebsite', [
             // alert(category);
             $scope.selectCategory = category;
             $scope.selectcatImage = catImage;
-            var tempList = $filter('filter')($scope.categorieslist, {Category: category})[0];
-			$rootScope.ActivityDetailsObj = tempList;
-			$scope.selectedComp = tempList.DisplayName;
+            var tempList = $filter('filter')($scope.categorieslist, { Category: category })[0];
+            $rootScope.ActivityDetailsObj = tempList;
+            $scope.selectedComp = tempList.DisplayName;
         };
 
         $scope.changeLocationdetails = function (details) {
-        	$scope.selectedComp = details.DisplayName;
+            $scope.selectedComp = details.DisplayName;
 
             $rootScope.ActivityDetailsObj = details;
             // console.log($rootScope.ActivityDetailsObj);
@@ -565,18 +616,18 @@ angular.module('smoothflowwebsite', [
         };
         //=========================================
 
-    }]).controller('blogController', ['$scope', '$route', '$routeParams','$timeout', function ($scope, $route, $routeParams, $timeout) {
-		$scope.thisRouterState = false;
-		$timeout(function () {
-			$scope.thisRouterState = true;
-		}, 700);
+    }]).controller('blogController', ['$scope', '$route', '$routeParams', '$timeout', function ($scope, $route, $routeParams, $timeout) {
+        $scope.thisRouterState = false;
+        $timeout(function () {
+            $scope.thisRouterState = true;
+        }, 700);
 
-		$scope.setRoutingBg = function(){
-			$scope.thisRouterState = false;
-			$timeout(function () {
-				$scope.thisRouterState = true;
-			}, 700);
-		};
+        $scope.setRoutingBg = function () {
+            $scope.thisRouterState = false;
+            $timeout(function () {
+                $scope.thisRouterState = true;
+            }, 700);
+        };
         // console.log("activity controller hits");
 
         if ($routeParams.post != null) {
@@ -602,14 +653,16 @@ angular.module('smoothflowwebsite', [
             }
         ]
 
-    }]).controller('contactController', ['$scope', '$rootScope', '$http', function ($scope, $rootScope, $http) {
-        debugger;
+    }]).controller('contactController', ['$scope', '$rootScope', '$http', '$mdToast', function ($scope, $rootScope, $http, $mdToast) {
+        //  debugger;
+
+        $scope.isSend = false;
         $scope.sendMailContact = function (emailDetails) {
             console.log(emailDetails)
             // $http.post('php/sendemail.php').success(function (data) {
             //     $scope.details = data;
             // })
-
+            $scope.isSend = true;
             $http({
                 url: "php/sendemail.php",
                 method: "POST",
@@ -620,12 +673,21 @@ angular.module('smoothflowwebsite', [
             }).success(function (data, status, headers, config) {
                 console.log(data);
                 $scope.message = "Email sent successfully";
-
+                $scope.showMessage($scope.message);
                 console.log($scope.message);
             }).error(function (data, status, headers, config) {
                 console.log(data);
                 $scope.message = "";
+                $scope.isSend = false;
             });
+
+
+            // $scope.showMessage();
+        }
+
+
+        $scope.showMessage = function (msg) {
+            $mdToast.show($mdToast.simple().content(msg).position('bottom right').hideDelay(3000));
         }
 
     }]);

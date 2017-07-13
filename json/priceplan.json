@@ -35,7 +35,7 @@
       {
         "tag": "bandwidth",
         "sign": "<=",
-        "amount": "1000",
+        "amount": "256",
         "expiry": {
           "uom": "year",
           "value": "1"
@@ -79,7 +79,7 @@
       {
         "tag": "bandwidth",
         "sign": "<=",
-        "amount": "1000",
+        "amount": "256",
         "expiry": {
           "uom": "year",
           "value": "1"
@@ -123,7 +123,7 @@
       {
         "tag": "bandwidth",
         "sign": "<=",
-        "amount": "1000",
+        "amount": "256",
         "expiry": {
           "uom": "year",
           "value": "1"
@@ -167,7 +167,7 @@
       {
         "tag": "bandwidth",
         "sign": "<=",
-        "amount": "1000",
+        "amount": "256",
         "expiry": {
           "uom": "year",
           "value": "1"
