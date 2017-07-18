@@ -8119,10 +8119,35 @@ div.wpcf7-mail-sent-ok {
     -o-transition: background 0.5s;
     transition: background 0.5s;
 }
+.client-download .price-btn{
+    display: inline-block;
+    padding: 10px 15px;
+    background: #FF6E41;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px;
+    border: solid 2px #FF6E41;
+    /*border: solid 1px #e85b30;*/
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
+}
 .client-download .download-btn:hover{
     background: transparent;
     border:solid 2px #34495e;
     color: #34495e;
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
+}
+.client-download .price-btn:hover{
+    background: transparent;
+    border:solid 2px #FF6E41;
+    color: #FF6E41;
     -webkit-transition: background 0.5s;
     -moz-transition: background 0.5s;
     -ms-transition: background 0.5s;
@@ -8389,16 +8414,18 @@ a.activitya:hover, a.activitya:active {
     zoom:1;
 }
 .title-row{
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #000;
     font-size: 14px;
     overflow:hidden;
+    padding-left: 5px;
 }
 .title-row .title-heading{
-    border-bottom: solid 1px #dddddd;
-    margin-bottom: 10px;
-    font-weight:bold;
+    /* border-bottom: solid 1px #dddddd; */
+    /* margin-bottom: 10px; */
+    font-weight: bold;
     color: #34495e;
+    padding-bottom: 15px;
 }
 .empty-msg{
     text-align: center;
@@ -8426,3 +8453,74 @@ a.activitya:hover, a.activitya:active {
     /*color: #909090;*/
 /*}*/
 /* acticity deatil page styles ends here */
+
+/*Pricing page*/
+.price_page_content table {
+    max-width: 90%;
+    margin: 0 auto;
+    /*background-color: #27303b;*/
+    /*background-color: ##34495e;*/
+    text-align: left;
+    color: rgba(255,255,255,.8);
+    font-size: 14px;
+}
+.price_page_content table tbody {
+    border:none;
+    background: none;
+}
+.price_page_content .price_text {
+    font-size: 20px;
+}
+.price_page_content table tbody tr:nth-child(even) {
+    background: inherit;
+}
+.price_page_content table td.title_section {
+    background-color: #2e4256;
+    text-align: left;
+    width: 30%;
+}
+.price_page_content table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(29, 35, 43, 0.2);
+    border-top: 1px solid rgba(29, 35, 43, 0.5);
+}
+.price_page_content .spacer{
+    background-color: #2e4256;
+}
+.td_title_text {
+    color: #409ee8;
+    font-size: 16px;
+}
+.td_title_text_large {
+    color: #26bda0;
+    font-size: 24px;
+}
+.tick {
+    background: rgba(0, 0, 0, 0) url(images/tick.png) no-repeat scroll center center!important;
+    display: block;
+    height: 20px;
+    margin: 0 auto;
+    text-indent: -9999999px!important;
+    width: 20px;
+}
+.cross {
+    background: rgba(0, 0, 0, 0) url(images/cross.png) no-repeat scroll center center!important;
+    display: block;
+    height: 20px;
+    margin: 0 auto;
+    text-indent: -9999999px!important;
+    width: 20px;
+}
+.feature-block{
+    padding: 30px 0;
+    color: #000;
+}
+.feature-block>div:first-child{
+   text-align: center;
+}
+.feature-block .heading{
+    margin: 40px 0 20px;
+    font-weight: bold;
+    color: #34495e;
+}
+/*Pricing page*/

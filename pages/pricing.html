@@ -1,8 +1,8 @@
-<div id="wrapper">
+<div id="wrapper" style="background: #34495e;">
 	<!--price page-->
 	<div class="innertitle" data-sr="enter bottom and move 50px over 0.5s">
 		<div class="row">
-			<h1>Pricing</h1>
+			<h1>Choose your plan</h1>
 		</div>
 	</div>
 	<div class="innercontent">
@@ -10,26 +10,140 @@
 			<div class="wpb_column vc_column_container vc_col-sm-12">
 				<div class="vc_column-inner ">
 					<div class="wpb_wrapper">
-						<h3 style="font-size: 38px;color: #3a3a3a;line-height: 1.2;text-align: center;font-family:Montserrat;font-weight:400;font-style:normal" class="vc_custom_heading vc_custom_1478774559374">Choose Your Plan</h3>
+						<!--<h3 style="font-size: 38px;color: #3a3a3a;line-height: 1.2;text-align: center;font-family:Montserrat;font-weight:400;font-style:normal" class="vc_custom_heading vc_custom_1478774559374">Choose Your Plan</h3>-->
 </div>
 </div>
 </div>
 <div class="plans">
-<div ng-repeat="n in palndetails">
-  <div class="plan">
-      <h3 class="plan-title">{{n.name}}</h3>
-      <p class="plan-price">{{n.price}}<span class="plan-unit"> per month</span></p>
-      <ul class="plan-features">
-        <li class="plan-feature">{{n.rules[0].amount}}<span class="plan-feature-name"> Max. Users</span></li>
-        <li class="plan-feature">{{n.rules[1].amount}}<span class="plan-feature-name"> No. of WF</span></li>
-        <li class="plan-feature">{{n.rules[2].amount}}<span class="plan-feature-name"> No. of Request</span></li>
-		<li class="plan-feature">{{n.rules[3].amount}}<span class="plan-feature-name"> Bandwidth</span></li>
-		<!--<li class="plan-feature">N/A<span class="plan-feature-name">Additional Workflow</span></li>-->
-		<!--<li class="plan-feature">N/A<span class="plan-feature-name">Additional 1000 Request</span></li>-->
-      </ul>
-      <a href="http://smoothflow.io/app/auth/#/auth?signup=true&package={{n.code}}" class="plan-button">Choose Plan</a>
+<!--<div ng-repeat="n in palndetails">-->
+  <!--<div class="plan">-->
+      <!--<h3 class="plan-title">{{n.name}}</h3>-->
+      <!--<p class="plan-price">{{n.price}}<span class="plan-unit"> per month</span></p>-->
+      <!--<ul class="plan-features">-->
+        <!--<li class="plan-feature">{{n.rules[0].amount}}<span class="plan-feature-name"> Max. Users</span></li>-->
+        <!--<li class="plan-feature">{{n.rules[1].amount}}<span class="plan-feature-name"> No. of WF</span></li>-->
+        <!--<li class="plan-feature">{{n.rules[2].amount}}<span class="plan-feature-name"> No. of Request</span></li>-->
+		<!--<li class="plan-feature">{{n.rules[3].amount}}<span class="plan-feature-name"> Bandwidth</span></li>-->
+		<!--&lt;!&ndash;<li class="plan-feature">N/A<span class="plan-feature-name">Additional Workflow</span></li>&ndash;&gt;-->
+		<!--&lt;!&ndash;<li class="plan-feature">N/A<span class="plan-feature-name">Additional 1000 Request</span></li>&ndash;&gt;-->
+      <!--</ul>-->
+      <!--<a href="http://smoothflow.io/app/auth/#/auth?signup=true&package={{n.code}}" class="plan-button">Choose Plan</a>-->
+    <!--</div>-->
+<!--</div>-->
+
+    <div class="wpb_wrapper price_page_content" style="margin-bottom: 30px">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr>
+                <td class="td_title_text title_section first_coloumn"></td>
+                <td class="second_coloumn td_title_text_large">Start</td>
+                <td class="third_coloumn td_title_text_large">Team</td>
+                <td class="fourth_coloumn td_title_text_large">Growing</td>
+                <td class="fourth_coloumn td_title_text_large">Enterprise</td>
+            </tr>
+            <tr>
+                <td class="td_title_text title_section">Features</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="title_section">Users</td>
+                <td class="">1 max. users</td>
+                <td class="">5 max. users</td>
+                <td class="">20 max. users</td>
+                <td class="">- max. users</td>
+                <!--<td><span class="tick">tick</span></td>-->
+            </tr>
+            <tr>
+                <td class="title_section">Workflows</td>
+                <td class="">1 max. workflow</td>
+                <td class="">10 max. workflow</td>
+                <td class="">25 max. workflow</td>
+                <td class="">- max. workflow</td>
+                <!--<td><span class="tick">tick</span></td>-->
+            </tr>
+            <tr>
+                <td class="title_section">Requests</td>
+                <td class="">1000 no. of workflows</td>
+                <td class="">10000 no. of workflows</td>
+                <td class="">100000 no. of workflows</td>
+                <td class="">Unlimited workflows</td>
+                <!--<td><span class="tick">tick</span></td>-->
+            </tr>
+            <tr>
+                <td class="title_section">Bandwidth</td>
+                <td class="">1000 of bandwidth</td>
+                <td class="">1000 of bandwidth</td>
+                <td class="">1000 of bandwidth</td>
+            </tr>
+            <tr class="space_row">
+                <td class="title_section"></td>
+                <td class="spacer"></td>
+                <td class="spacer"></td>
+                <td class="spacer"></td>
+                <td class="spacer"></td>
+            </tr>
+            <tr>
+                <td class="td_title_text title_section">Monthly Fee</td>
+                <td class="price_text">Free</td>
+                <td class="price_text">$9.99/Month</td>
+                <td class="price_text">$99.99/Month</td>
+                <td class="price_text">$199.99/Month</td>
+            </tr>
+            <!--<tr>-->
+                <!--<td class="td_title_text title_section">Annual Fee</td>-->
+                <!--<td>Free</td>-->
+                <!--<td>USD 199.99/Annum</td>-->
+                <!--<td>USD 399.99/Annum</td>-->
+            <!--</tr>-->
+            <tr class="space_row">
+                <td class="title_section"></td>
+                <td class="spacer"></td>
+                <td class="spacer"></td>
+                <td class="spacer"></td>
+                <td class="spacer"></td>
+            </tr>
+            <!--<tr>-->
+                <!--<td class="td_title_text title_section first_coloumn">User License</td>-->
+                <!--<td class="second_coloumn">1</td>-->
+                <!--<td class="third_coloumn">5</td>-->
+                <!--<td class="fourth_coloumn">10</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td class="title_section">Additional User License Fee</td>-->
+                <!--<td>N/A</td>-->
+                <!--<td>USD 2/User</td>-->
+                <!--<td>USD 2/User</td>-->
+            <!--</tr>-->
+            <tr>
+                <td class="title_section"></td>
+                <td>
+                    <div class="client-download">
+                        <a class="download-btn price-btn" href="http://smoothflow.io/app/auth/#/auth?signup=true&package=Free" target="_blank">Choose plan</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="client-download">
+                        <a class="download-btn price-btn" href="http://smoothflow.io/app/auth/#/auth?signup=true&package=imbig" target="_blank">Choose plan</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="client-download">
+                        <a class="download-btn price-btn" href="http://smoothflow.io/app/auth/#/auth?signup=true&package=justgrowing" target="_blank">Choose plan</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="client-download">
+                        <a class="download-btn price-btn" href="http://smoothflow.io/app/auth/#/auth?signup=true&package=justgrowing" target="_blank">Choose plan</a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
     </div>
-</div>
 </div>   
     
     <!--<div class="plan " test test>
