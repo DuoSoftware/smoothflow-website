@@ -13,7 +13,7 @@
                 <li ng-click="toggleCategory('all')" style="padding-left: 45px"><a>All</a></li>
                 <!--<li class="active-activity" ng-click="toggleCategory('all')"><a>All</a></li>-->
                 <li ng-repeat="items in ClassToFilter()|filter:filterClass" ng-click="toggleCategory(items)" ng-class="{'active':selectedActivityCat == items}">
-                    <img src="wp-content/themes/smoothflow/images/{{items.class|lowercase}}.png" alt="" style="width: 18px;margin-right: 10px;"><a>{{items.class}}</a>
+                    <img src="wp-content/themes/smoothflow/images/{{items.class|lowercase}}.png" alt="" style="width: 18px;margin-right: 10px;margin-bottom: 3px;"><a>{{items.class}}</a>
                     <div class="category-arrow" ng-if="selectedActivityCat == items"></div>
                 </li>
                 <!--<li><a>Database</a></li>
