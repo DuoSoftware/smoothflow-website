@@ -23,6 +23,10 @@ cd /var/www/html/json/
 rm priceplan.json
 wget http://dev.smoothflow.io/apis/plan/priceplan.json
 
+cd /var/www/html/json/
+rm controldata.json
+wget http://dev.smoothflow.io/app/json/controldata.json
+
 echo "Setting apache settings"
 sudo chgrp -R www-data /var/www/html/
 sudo chown -R www-data /var/www/html/
